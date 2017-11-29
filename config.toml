@@ -2,7 +2,7 @@ baseURL = "http://dobrabasta.sk/"
 languageCode = "sk-SK"
 title = "Dobrá Bašta"
 
-layout = "basta"
+theme = "basta"
 
 [params]
 currency = "€"
