@@ -1,105 +1,98 @@
 {
-"p": {
-	"volume": "",
-	"name": "PIVÁ",
-	"description": "",
-	"price": ""
-},
-"p00": {
-	"volume": "0,33 l",
-	"name": "Hradný pán",
-	"description": "14 stupňové, stout",
-	"price": "1.99"
-},
-"p01": {
-	"volume": "0,33 l",
-	"name": "Darebák",
-	"description": "10 stupňové, ležiak",
-	"price": "1.49"
-},
-"p02": {
-	"volume": "0,33 l",
-	"name": "Srdcovka",
-	"description": "12 stupňové, špeciál s čerešňovým sirupom",
-	"price": "2.49"
-},
-"p03": {
-	"volume": "0,33 l",
-	"name": "Kozel",
-	"description": "10 stupňové, tradičný ležiak",
-	"price": "0.99"
-},
-"p04": {
-	"volume": "0,33 l",
-	"name": "Podstolovník",
-	"description": "14 stupňové, IPA",
-	"price": "2.99"
-},
-"p05": {
-	"volume": "0,33 l",
-	"name": "Horný výplach",
-	"description": "11 stupňové, tmavé z Vyhní",
-	"price": "0.99"
-},
-"p06": {
-	"volume": "0,33 l",
-	"name": "Tokajúci tetrov",
-	"description": "11 stupňové, tmavé",
-	"price": "0.99"
-},
-"p07": {
-	"volume": "0,33 l",
-	"name": "Ochmeľená opica",
-	"description": "14 stupňové, moc moc silné",
-	"price": "0.99"
-},
-
-"n": {
-	"volume": "",
-	"name": "NEALKO",
-	"description": "",
-	"price": ""
-},
-
-"n00": {
-	"volume": "0,3l",
-	"name": "Čaj",
-	"description": "čierny, ovocný alebo bylinkový",
-	"price": "0,99"
-},
-
-"n01": {
-	"volume": "0,33 l",
-	"name": "Kofola",
-	"description": "Originál, vo fľaši",
-	"price": "0,79"
-},
-
-"n02": {
-	"volume": "0,33 l",
-	"name": "Vinea",
-	"description": "Originál, vo fľaši",
-	"price": "0,79"
-},
-
-"n03": {
-	"volume": "0,5 l",
-	"name": "Budiš",
-	"description": "perlivá, vo fľaši",
-	"price": "0,79"
-},
-"n04": {
-	"volume": "0,5 l",
-	"name": "Budiš",
-	"description": "neperlivá, vo fľaši",
-	"price": "0,79"
-},
-
-"n05": {
-	"volume": "0,33 l",
-	"name": "Coca-Cola",
-	"description": "Originál plechovka",
-	"price": "0,99"
-}
-
+	"p": {
+		"volume": "",
+		"name": "PIVÁ",
+		"description": "",
+		"price": ""
+	},
+	"p00": {
+		"volume": "0,33 l",
+		"name": "Hradný pán",
+		"description": "14 stupňové, stout",
+		"price": "1.99"
+	},
+	"p01": {
+		"volume": "0,33 l",
+		"name": "Darebák",
+		"description": "10 stupňové, ležiak",
+		"price": "1.49"
+	},
+	"p02": {
+		"volume": "0,33 l",
+		"name": "Srdcovka",
+		"description": "12 stupňové, špeciál s čerešňovým sirupom",
+		"price": "2.49"
+	},
+	"p03": {
+		"volume": "0,33 l",
+		"name": "Kozel",
+		"description": "10 stupňové, tradičný ležiak",
+		"price": "0.99"
+	},
+	"p04": {
+		"volume": "0,33 l",
+		"name": "Podstolovník",
+		"description": "14 stupňové, IPA",
+		"price": "2.99"
+	},
+	"p05": {
+		"volume": "0,33 l",
+		"name": "Horný výplach",
+		"description": "11 stupňové, tmavé z Vyhní",
+		"price": "0.99"
+	},
+	"p06": {
+		"volume": "0,33 l",
+		"name": "Tokajúci tetrov",
+		"description": "11 stupňové, tmavé",
+		"price": "0.99"
+	},
+	"p07": {
+		"volume": "0,33 l",
+		"name": "Ochmeľená opica",
+		"description": "14 stupňové, moc moc silné",
+		"price": "0.99"
+	},
+	"n": {
+		"volume": "",
+		"name": "NEALKO",
+		"description": "",
+		"price": ""
+	},
+	"n00": {
+		"volume": "0,3l",
+		"name": "Čaj",
+		"description": "čierny, ovocný alebo bylinkový",
+		"price": "0,99"
+	},
+	"n01": {
+		"volume": "0,33 l",
+		"name": "Kofola",
+		"description": "Originál, vo fľaši",
+		"price": "0,79"
+	},
+	"n02": {
+		"volume": "0,33 l",
+		"name": "Vinea",
+		"description": "Originál, vo fľaši",
+		"price": "0,79"
+	},
+	"n03": {
+		"volume": "0,5 l",
+		"name": "Budiš",
+		"description": "perlivá, vo fľaši",
+		"price": "0,79"
+	},
+	"n04": {
+		"volume": "0,5 l",
+		"name": "Budiš",
+		"description": "neperlivá, vo fľaši",
+		"price": "0,79"
+	},
+	"n05": {
+		"volume": "0,33 l",
+		"name": "Coca-Cola",
+		"description": "Originál plechovka",
+		"price": "0,99"
+	}
 }
