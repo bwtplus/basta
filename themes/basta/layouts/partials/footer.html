@@ -3,13 +3,13 @@
         <div class="container inner">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; Copyright {{ .Site.Title }} 2017
+                    &copy; 2017 {{ .Site.Title }}
                 </div>
                 <div class="col-sm-6">
                     <div class="social-bar">
-                        <a href="{{ $.Site.Params.facebook }}" class="fa fa-facebook tooltipped" title=""></a>
-                        <a href="{{ $.Site.Params.zomato }}" class="fa fa-spoon tooltipped" title=""></a>
-                        <a href="{{ $.Site.Params.googleplus }}" class="fa fa-google-plus tooltipped" title=""></a>
+                       {{ if $.Site.Params.facebook }} <a href="{{ $.Site.Params.facebook }}" class="fa fa-facebook tooltipped" title=""></a> {{ end }}
+                       {{ if $.Site.Params.zomato }}<a href="{{ $.Site.Params.zomato }}" class="fa fa-spoon tooltipped" title=""></a>{{ end }}
+                       {{ if $.Site.Params.googleplus }}<a href="{{ $.Site.Params.googleplus }}" class="fa fa-google-plus tooltipped" title=""></a>{{ end }}
                     </div>
                 </div>
             </div>
