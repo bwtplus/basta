@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dobrá Bašta</title>
-    <link>http://dobrabasta.org/categories/</link>
+    <link>http://dobrabasta.sk/categories/</link>
     <description>Recent content in Categories on Dobrá Bašta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>sk-SK</language>
     
-	<atom:link href="http://dobrabasta.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dobrabasta.sk/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://dobrabasta.org/categories/</loc>
+    <loc>http://dobrabasta.sk/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dobrabasta.org/</loc>
+    <loc>http://dobrabasta.sk/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dobrabasta.org/tags/</loc>
+    <loc>http://dobrabasta.sk/tags/</loc>
     <priority>0</priority>
   </url>
   
