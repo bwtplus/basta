@@ -1,0 +1,14 @@
+baseURL = "http://dobrabasta.sk/"
+languageCode = "sk-SK"
+title = "Dobrá Bašta"
+
+theme = "basta"
+
+[params]
+currency = "€"
+subtitle = "Poctivá domáca kuchyňa"
+
+facebook = "http://www.facebook.com/pages/dobrabasta"
+zomato = "https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-v"
+googleplus = "https://www.googleplus.com/basta"
+googleAnalytics = "UA-123-45"

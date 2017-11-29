@@ -1,0 +1,141 @@
+{{ partial "header.html" . }}
+
+    <div id="food-menu" class="light-wrapper pricing">
+        <section class="ss-style-top"></section>
+        <div class="container inner">
+            <h2 class="section-title text-center">Denné menu</h2>
+            <p class="lead main text-center">Vyberte si z našej dnešnej ponuky!</p>
+
+               <div class="row">
+
+			   {{ range $index, $offer := .Site.Data.offer }}
+				<div class="col-md-6 col-sm-6">
+                    <div class="pricing-item">
+                        <a href="#"><img class="img-responsive img-thumbnail" src="{{ .photo }}" alt=""></a>
+                        <div class="pricing-item-details">
+                           <h3><a href="#">{{ .name }}</a></h3>
+                            <p>{{ .description }}</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--price tag-->
+                        <span class="hot-tag br-red">{{ .price }}</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+				{{ if not (modBool (int $index) 2) }}
+				<div class="clearfix"></div>
+				{{ end }}
+				{{ end }}
+            </div>
+        </div>
+		<!-- /.container -->
+        <section class="ss-style-bottom"></section>
+    </div><!--/#food-menu-->
+
+    <div id="drinks" class="parallax">
+        <div class="container inner">
+
+            <h2 class="section-title text-center">Ponuka nápojov</h2>
+            <p class="lead text-center drinks">Orosená odmena pre každého jedáka!</p>
+            <div class="row drinks">
+			<table width="100%">
+                {{ range .Site.Data.drinks }}
+				{{ if .price}}
+				<tr>
+					<td width="5%">{{ .volume }}</td>
+					<td width="90%"><span class="drink-name">{{ .name }}</span> {{ .description}}</td>
+					<td width="5%">{{ .price }} {{ $.Site.Params.currency }}</td>
+				</tr>
+				{{ else }}
+				<tr>
+					<td width="5%">&nbsp;</td>
+					<td width="90%"><div class="drink-category-title">{{ .name }}</div></td>
+					<td width="5%">&nbsp;</td>
+				</tr>
+				{{ end }}
+				{{ end }}
+			</table>
+            </div>
+
+        </div>
+        <!-- /.container --> 
+    </div><!-- /#drinks -->
+
+<div id="about-us" class="light-wrapper">
+        <section class="ss-style-top"></section>
+        <div class="container inner">
+            <h2 class="section-title text-center">O nás</h2>
+            <p class="lead main text-center">Domáca kuchyňa zameraná na regionálne slovenské, české a maďarské jedlá. Denná ponuka cca 30 jedál zahŕňa polievky, mäsité, bezmäsité aj sladké jedlá, všetky pripravované z čerstvých surovín a denne obmieňané. </p>
+            <div class="row text-center about-us">
+                <div class="col-sm-4">
+                    <div class="col-wrapper">
+                        <div class="icon-wrapper"> <i class="fa fa-anchor"></i> </div>
+                        <h3>Od roku 2001</h3>
+                        <p>Dobrá bašta pre Vás varí už od roku 2001. O Vašu dlhodobú spokojnosť sa stará tím skúsených kuchárov a šikovná obsluha. Od roku 2012 sme sa rozrástli o tri ďalšie prevádzky a to v Žiline, Banskej Bystrici a Košiciach.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-wrapper">
+                        <div class="icon-wrapper"> <i class="fa  fa-cutlery"></i> </div>
+                        <h3>Tradičná kuchyňa</h3>
+                        <p>Varíme z čerstvých domácich surovín. Zameriavame sa na tradičnú slovenskú kuchyňu, ale aj české a maďarské špeciality. Naše jedlá Vás zasýtia, sú zdravé a chutné.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-wrapper">
+                        <div class="icon-wrapper"> <i class="fa fa-coffee"></i> </div>
+                        <h3>Domáce nápoje</h3>
+                        <p>Podporujeme domácich výrobcov nápojov. V našich prevádzkach si môžte k jedlu objednať domáce pivné špeciály, alebo tiež limonády z domácich ovocných sirupov.</p>
+                    </div>
+                </div>
+            </div>
+            
+		{{ if .Site.Data.news}}
+		<p class="lead main">&nbsp;</p>
+		<h2 class="section-title text-center">Oznamy</h2>
+		{{ end }}
+		{{ range .Site.Data.news }}
+			<p class="text-center">{{ .text }}</p><hr/>
+		{{ end }}
+
+        </div>
+        <!-- /.container -->
+        <section class="ss-style-bottom"></section>
+    </div><!-- #about-us -->
+
+    <div id="contact" class="parallax">
+        <section class="ss-style-top"></section>
+        <div class="container inner">
+            <h2 class="section-title text-center">Kontakt</h2>
+            <p class="lead contact main text-center contacts">Nájdete nás veľmi ľahko, vrátite sa vždy zakrátko.</p>
+            <div class="row">
+                <div class="col-md-8">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.324470130868!2d17.10649853959983!3d48.13260031340803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c896e750cecbf%3A0xcf44c74fc7d536d!2sAupark!5e0!3m2!1ssk!2ssk!4v1511180852698" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div><!-- col-md-6 -->
+                <div class="col-md-4">
+                    
+                    <h3><i class="fa fa-clock-o fa-fw"></i>Otváracie hodiny</h3>
+                    
+
+				<h4>PONDELOK - PIATOK</h4>
+                    <p>Od 10:00 Do 21:00</p>
+				<h4>SOBOTA, NEDEĽA</h4>
+                    <p>Od 9:00 Do 21:00</p>
+					<br/>
+                    <h3><i class="fa fa-map-marker fa-fw"></i>Kde nás nájdete</h3>
+                    <p>Aupark, 2. poschodie, Einsteinova 18, Petržalka, Bratislava V</p>
+					<br/>
+                    <h3><i class="fa fa-mobile fa-fw"></i>Kontakt</h3>
+                    <p>E-mail: <a href="mailto:info@dobrabasta.sk">info@dobrabasta.sk</a></p>
+                    <p>Telefón:  +421 948838100</p>
+
+                </div><!-- col-md-6 -->
+            </div>
+            <!-- /.services --> 
+        </div>
+        <!-- /.container -->
+    </div><!-- #contact -->
+
+
+
+{{ partial "footer.html" . }}
