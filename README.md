@@ -8,4 +8,4 @@ hugo
 ```
 
 ## Theme
-//TODO: add source for original theme
+https://themewagon.com/themes/bootstrap-powered-restaurant-website-template-meatking-pro/
