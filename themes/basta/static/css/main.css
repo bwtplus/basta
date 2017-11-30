@@ -29,7 +29,7 @@ section::before,section::after {
     -o-background-size:25px 100%;
     background-size:25px 100%;
     top:0;
-    background-image:linear-gradient(315deg,#FFF 50%,transparent 50%),linear-gradient(45deg,#FFF 50%,transparent 50%);
+    background-image:linear-gradient(315deg,#fbfbfb 50%,transparent 50%),linear-gradient(45deg,#fbfbfb 50%,transparent 50%);
     margin-top:-30px;
     z-index:100;
 }
@@ -42,7 +42,7 @@ section::before,section::after {
     -o-background-size:25px 100%;
     background-size:25px 100%;
     top:0;
-    background-image:linear-gradient(583deg,#FFF 50%,transparent 50%),linear-gradient(136deg,#FFF 50%,transparent 50%);
+    background-image:linear-gradient(583deg,#fbfbfb 50%,transparent 50%),linear-gradient(136deg,#fbfbfb 50%,transparent 50%);
     margin-top:0px;
     z-index: 100;
 }
@@ -194,6 +194,7 @@ section::before,section::after {
     background-size:cover;
     position:relative;
     color:#FFF;
+	padding-bottom: 32px;
 }
 
 .parallax.parallax2 {
@@ -275,7 +276,6 @@ section::before,section::after {
 }
 .pricing-item-details a,.pricing-item-details p,.pricing .lead {
     color:black;
-    font-weight:bold;
 }
 .pricing .pricing-item .pricing-item-details {
     margin-left:265px;
@@ -284,6 +284,7 @@ section::before,section::after {
     margin-top:0;
     margin-bottom:8px;
     font-size:22px;
+	font-weight:bold;
 }
 .pricing .pricing-item .pricing-item-details p {
 }
@@ -310,7 +311,6 @@ section::before,section::after {
 
 .drinks, .contact{
 	color: white;
-	padding-bottom: 32px;
 }
 	
 .drinks	{
