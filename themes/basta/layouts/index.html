@@ -96,22 +96,21 @@
     <div id="contact" class="parallax">
         <section class="ss-style-top"></section>
         <div class="container inner">
-			{{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "subtitle" }}
-				<h2 class="section-title text-center">{{ .Title }}</h2>
-				<p class="lead contact main text-center contacts">{{ .RawContent }}</p>
-			{{ end }}
+			{{ range first 1 (where .Site.Pages "Type" "=" "contact") }}
+			<h2 class="section-title text-center">{{ .Title }}</h2>
+			<p class="lead contact main text-center contacts">{{ .RawContent }}</p>
             <div class="row">
                 <div class="col-md-8">
-                {{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "col1" }}
-					{{ .Content }}
-				{{ end }}
+                <iframe src="https://{{ .Params.description}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-4">
-                {{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "col2" }}
-					{{ .Content }}
+                {{ range where .Site.Pages "Type" "=" "contact-col"}}
+					<h3><i class="fa {{ .Params.description }} fa-fw"></i>{{ .Title }}</h3>
+					<p>{{ .Content }}</p>
 				{{ end }}
                 </div>
             </div>
+			{{ end }}
         </div>
     </div><!-- #contact -->
 

@@ -1,1 +1,1 @@
-hugo server -t basta
+hugo server
