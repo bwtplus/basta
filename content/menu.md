@@ -5,4 +5,4 @@ type: menu
 description: subtitle
 weight: 1
 ---
-<p class="lead main text-center">Vyberte si z našej dnešnej ponuky!</p>
+Vyberte si z našej dnešnej ponuky!

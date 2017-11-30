@@ -5,7 +5,7 @@
         <div class="container inner">
             {{ range where (where .Site.Pages "Type" "=" "menu") ".Params.description" "=" "subtitle" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				{{ .Content }}
+				<p class="lead main text-center">{{ .RawContent }}</p>
 			{{ end }}
                <div class="row">
 
@@ -35,7 +35,7 @@
         <div class="container inner">
 			{{ range where (where .Site.Pages "Type" "=" "drinks") ".Params.description" "=" "subtitle" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				{{ .Content }}
+				<p class="lead text-center drinks">{{ .RawContent }}</p>
 			{{ end }}
 			
             <div class="row drinks">
@@ -66,44 +66,28 @@
         <div class="container inner">
             {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.description" "=" "subtitle" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				{{ .Content }}
+				<p class="lead main text-center">{{ .RawContent }}</p>
 			{{ end }}
             <div class="row text-center about-us">
+			{{ range where .Site.Pages "Type" "=" "about-us-col"}}
                 <div class="col-sm-4">
                     <div class="col-wrapper">
-                        <div class="icon-wrapper"> <i class="fa fa-anchor"></i> </div>
-                        {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.description" "=" "col1" }}
+                        <div class="icon-wrapper"> <i class="fa {{ .Params.description }}"></i> </div>
 							<h3>{{ .Title }}</h3>
 							{{ .Content }}
-						{{ end }}
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-wrapper">
-                        <div class="icon-wrapper"> <i class="fa  fa-cutlery"></i> </div>
-                          {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.description" "=" "col2" }}
-							<h3>{{ .Title }}</h3>
-							{{ .Content }}
-						{{ end }}
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="col-wrapper">
-                        <div class="icon-wrapper"> <i class="fa fa-coffee"></i> </div>
-                        {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.description" "=" "col3" }}
-							<h3>{{ .Title }}</h3>
-							{{ .Content }}
-						{{ end }}
-                    </div>
-                </div>
+			{{ end }}
             </div>
             
-		{{ if .Site.Data.news}}
+		{{ range first 1 (where .Site.Pages "Type" "=" "news") }}
+		{{ if .Content }}
 		<p class="lead main">&nbsp;</p>
-		<h2 class="section-title text-center">{{ range where .Site.Pages "Type" "=" "news" }} {{ .Title }} {{ end }}</h2>
-		{{ end }}
-		{{ range where .Site.Pages "Type" "=" "news" }}
+		<h2 class="section-title text-center">{{ .Title }}</h2>
+		<div class="news-items">
 			{{ .Content }}
+		</div>
+		{{ end }}
 		{{ end }}
         </div>
         <section class="ss-style-bottom"></section>
@@ -114,7 +98,7 @@
         <div class="container inner">
 			{{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "subtitle" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				{{ .Content }}
+				<p class="lead contact main text-center contacts">{{ .RawContent }}</p>
 			{{ end }}
             <div class="row">
                 <div class="col-md-8">
