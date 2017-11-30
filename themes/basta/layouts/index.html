@@ -100,10 +100,10 @@
             
 		{{ if .Site.Data.news}}
 		<p class="lead main">&nbsp;</p>
-		<h2 class="section-title text-center">Oznamy</h2>
+		<h2 class="section-title text-center">{{ range where .Site.Pages "Type" "=" "news" }} {{ .Title }} {{ end }}</h2>
 		{{ end }}
-		{{ range .Site.Data.news }}
-			<p class="text-center">{{ .text }}</p><hr/>
+		{{ range where .Site.Pages "Type" "=" "news" }}
+			{{ .Content }}
 		{{ end }}
         </div>
         <section class="ss-style-bottom"></section>
@@ -112,7 +112,7 @@
     <div id="contact" class="parallax">
         <section class="ss-style-top"></section>
         <div class="container inner">
-				{{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "subtitle" }}
+			{{ range where (where .Site.Pages "Type" "=" "contact") ".Params.description" "=" "subtitle" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
 				{{ .Content }}
 			{{ end }}
