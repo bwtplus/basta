@@ -108,8 +108,8 @@ section::before,section::after {
     position:relative;
     top:-5px;
 }
-.navbar-nav>li:nth-child(2) {
-    margin-right: 165px;
+.navbar-nav>li.logoSpacing {
+    width:165px;
 }
 
 #menu {
