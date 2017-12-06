@@ -93,11 +93,9 @@ $(document).ready(function() {
 		}
 		);
 	});
-
-
 });
 
-$(document).ready(function() {
+function addLightBoxes() {
     var $lightbox = $('#lightbox');
     
     $('[data-target="#lightbox"]').on('click', function(event) {
@@ -121,4 +119,56 @@ $(document).ready(function() {
         $lightbox.find('.modal-dialog').css({'width': $img.width()});
         $lightbox.find('.close').removeClass('hidden');
     });
+}
+
+function fetchFoodMenu(success, error) {
+    $.ajax({
+		url : 'http://127.0.0.1:1313/js/updatedoffer.js',
+		type : 'GET',
+		dataType: 'json',
+		success : success,
+		error : error
+	});
+}
+
+function updateFoodMenu(data) {
+	var list = $.map(data, function( value, index ) { return value; });
+	var template = '<div class="col-md-6 col-sm-6">' + 
+'	<div class="pricing-item">' + 
+'		<a href="#" data-toggle="modal" data-target="#lightbox">' + 
+'			<img class="img-responsive img-thumbnail" src="{photo}" alt="">' + 
+'		</a>' + 
+'		<div class="pricing-item-details">' + 
+'			<h3><a href="#food-menu">{name}</a></h3>' + 
+'			<p>{description}</p>' + 
+'		</div>' + 
+'		<span class="hot-tag br-red">{price}</span>' + 
+'		<div class="clearfix"></div>' + 
+'	</div>' + 
+'</div>';
+
+	var foodMenuContent = list.reduce(function(acc, val, id) {
+		acc += fillTemplate(template, val);
+		if ( id % 2 === 1 ){
+			acc +='<div class="clearfix"></div>';
+		}
+		return acc;
+	}, '');
+	$("#upadatedMenu").html(foodMenuContent);
+	addLightBoxes();
+}
+
+function fillTemplate(template, dataItem) {
+	var result = template;
+	for(var propertyName in dataItem) {
+		result = result.replace('{'+propertyName+'}', dataItem[propertyName]);
+	}
+	return result;
+}
+
+$(document).ready(function () {
+	fetchFoodMenu(updateFoodMenu, function(request,error) {
+			console.log("Error getting menu: " + error);
+	});
 });
+	
