@@ -123,7 +123,7 @@ function addLightBoxes() {
 
 function fetchFoodMenu(success, error) {
     $.ajax({
-		url : 'http://127.0.0.1:1313/js/updatedoffer.js',
+		url : feedUrl,
 		type : 'GET',
 		dataType: 'json',
 		success : success,
@@ -133,6 +133,8 @@ function fetchFoodMenu(success, error) {
 
 function updateFoodMenu(data) {
 	var list = $.map(data, function( value, index ) { return value; });
+// Object.values(data);
+// $.map(data, function( value, index ) { return value; });
 	var template = '<div class="col-md-6 col-sm-6">' + 
 '	<div class="pricing-item">' + 
 '		<a href="#" data-toggle="modal" data-target="#lightbox">' + 
@@ -146,6 +148,10 @@ function updateFoodMenu(data) {
 '		<div class="clearfix"></div>' + 
 '	</div>' + 
 '</div>';
+
+/*var abc = `aLinkcolor
+b
+c`;*/
 
 	var foodMenuContent = list.reduce(function(acc, val, id) {
 		acc += fillTemplate(template, val);
