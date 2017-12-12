@@ -1,7 +1,6 @@
 ---
 menu: about-us
 title: Od roku 2001
-type: about-us-col
 description: fa-anchor
 weight: 1
 ---

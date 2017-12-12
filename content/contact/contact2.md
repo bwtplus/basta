@@ -1,5 +1,4 @@
 ---
-type: contact-col
 description: fa-map-marker
 title: Kde nás nájdete
 weight: 2

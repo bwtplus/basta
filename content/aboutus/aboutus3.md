@@ -1,7 +1,6 @@
 ---
 menu: about-us
 title: Domáce nápoje
-type: about-us-col
 description: fa-coffee
 weight: 3
 ---

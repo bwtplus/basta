@@ -1,5 +1,4 @@
 ---
-type: contact-col
 description: fa-clock-o
 title: Otváracie hodiny
 weight: 1

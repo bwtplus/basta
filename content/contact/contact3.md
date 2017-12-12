@@ -1,5 +1,4 @@
 ---
-type: contact-col
 description: fa-mobile
 title: Kontakt
 weight: 3

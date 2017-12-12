@@ -1,8 +1,7 @@
 ---
 menu: drinks
 title: Ponuka nápojov
-type: drinks
-description: subtitle
+type: drinksSection
 weight: 2
 ---
 Orosená odmena pre každého jedáka!

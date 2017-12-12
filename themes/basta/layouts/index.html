@@ -3,7 +3,7 @@
     <div id="food-menu" class="light-wrapper pricing">
         <section class="ss-style-top"></section>
         <div class="container inner">
-            {{ range where (where .Site.Pages "Type" "=" "menu") ".Params.description" "=" "subtitle" }}
+            {{ range where .Site.Pages "Type" "=" "menuSection" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
 				<p class="lead main text-center">{{ .RawContent }}</p>
 			{{ end }}
@@ -17,7 +17,7 @@
 
     <div id="drinks" class="parallax">
         <div class="container inner">
-			{{ range where (where .Site.Pages "Type" "=" "drinks") ".Params.description" "=" "subtitle" }}
+			{{ range where .Site.Pages "Type" "=" "drinksSection" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
 				<p class="lead text-center drinks">{{ .RawContent }}</p>
 			{{ end }}
@@ -53,7 +53,7 @@
 				<p class="lead main text-center">{{ .RawContent }}</p>
 			{{ end }}
             <div class="row text-center about-us">
-			{{ range where .Site.Pages "Type" "=" "about-us-col"}}
+			{{ range where $.Pages ".Section" "=" "aboutus"}}
                 <div class="col-sm-4">
                     <div class="col-wrapper">
                         <div class="icon-wrapper"> <i class="fa {{ .Params.description }}"></i> </div>
@@ -64,14 +64,14 @@
 			{{ end }}
             </div>
             
-		{{ range first 1 (where .Site.Pages "Type" "=" "news") }}
-		{{ if .Content }}
+		{{ range first 1 (where .Site.Pages "Type" "=" "newsSection") }}
 		<p class="lead main">&nbsp;</p>
 		<h2 class="section-title text-center">{{ .Title }}</h2>
 		<div class="news-items">
-			{{ .Content }}
+			{{ range where $.Pages ".Section" "=" "news"}}
+				{{ .Content }}
+			{{ end }}
 		</div>
-		{{ end }}
 		{{ end }}
         </div>
         <section class="ss-style-bottom"></section>
@@ -80,7 +80,7 @@
     <div id="contact" class="parallax">
         <section class="ss-style-top"></section>
         <div class="container inner">
-			{{ range first 1 (where .Site.Pages "Type" "=" "contact") }}
+			{{ range first 1 (where .Site.Pages "Type" "=" "contactSection") }}
 			<h2 class="section-title text-center">{{ .Title }}</h2>
 			<p class="lead contact main text-center contacts">{{ .RawContent }}</p>
             <div class="row">
@@ -88,7 +88,7 @@
                 <iframe src="https://{{ .Params.description}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-4">
-                {{ range where .Site.Pages "Type" "=" "contact-col"}}
+                {{ range where $.Pages ".Section" "=" "contact"}}
 					<h3><i class="fa {{ .Params.description }} fa-fw"></i>{{ .Title }}</h3>
 					<p>{{ .Content }}</p>
 				{{ end }}
