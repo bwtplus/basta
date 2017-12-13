@@ -328,6 +328,7 @@ section::before,section::after {
 .drink-category-title {
 	font-weight: bold;
 	padding: 24px 0 12px 0;
+	text-transform: uppercase;
 }
 .drinks table td {
 	padding: 2px;
