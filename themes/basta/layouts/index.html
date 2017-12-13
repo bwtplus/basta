@@ -21,28 +21,27 @@
 				<h2 class="section-title text-center">{{ .Title }}</h2>
 				<p class="lead text-center drinks">{{ .RawContent }}</p>
 			{{ end }}
-			
-            <div class="row drinks">
+		
+			<div class="row drinks">
+			{{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 			<table width="100%">
-                {{ range .Site.Data.drinks }}
-				{{ if .price}}
-				<tr>
-					<td width="5%">{{ .volume }}</td>
-					<td width="90%"><span class="drink-name">{{ .name }}</span> {{ .description}}</td>
-					<td width="5%">{{ .price }} {{ $.Site.Params.currency }}</td>
-				</tr>
-				{{ else }}
 				<tr>
 					<td width="5%">&nbsp;</td>
-					<td width="90%"><div class="drink-category-title">{{ .name }}</div></td>
+					<td width="90%"><div class="drink-category-title">{{ $key }}</div></td>
 					<td width="5%">&nbsp;</td>
 				</tr>
-				{{ end }}
+				{{ range $taxonomy.Pages }}
+				<tr>
+					<td width="5%">{{ .Params.volume }}</td>
+					<td width="90%"><span class="drink-name">{{ .Title }}</span> {{ .Description}}</td>
+					<td width="5%">{{ .Params.price }} {{ $.Site.Params.currency }}</td>
+				</tr>
 				{{ end }}
 			</table>
-            </div>
-
-        </div>
+			{{ end }}
+		</div>
+    </div>
+	
     </div><!-- /#drinks -->
 
 <div id="about-us" class="light-wrapper">
