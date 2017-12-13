@@ -1,5 +1,4 @@
 ---
-menu: about-us
 title: Tradičná kuchyňa
 description: fa-cutlery
 weight: 2

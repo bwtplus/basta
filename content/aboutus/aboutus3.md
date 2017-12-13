@@ -1,5 +1,4 @@
 ---
-menu: about-us
 title: Domáce nápoje
 description: fa-coffee
 weight: 3

@@ -1,5 +1,4 @@
 ---
-menu: about-us
 title: Od roku 2001
 description: fa-anchor
 weight: 1

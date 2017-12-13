@@ -5,7 +5,7 @@
         <div class="container inner">
             {{ range where .Site.Pages "Type" "=" "menuSection" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				<p class="lead main text-center">{{ .RawContent }}</p>
+				<p class="lead main text-center">{{ .Params.subtitle }}</p>
 			{{ end }}
                <div class="row" id="upadatedMenu">
 
@@ -19,7 +19,7 @@
         <div class="container inner">
 			{{ range where .Site.Pages "Type" "=" "drinksSection" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				<p class="lead text-center drinks">{{ .RawContent }}</p>
+				<p class="lead text-center drinks">{{ .Params.subtitle }}</p>
 			{{ end }}
 		
 			<div class="row drinks">
@@ -47,9 +47,9 @@
 <div id="about-us" class="light-wrapper">
         <section class="ss-style-top"></section>
         <div class="container inner">
-            {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.description" "=" "subtitle" }}
+            {{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.subtitle" "ne" "" }}
 				<h2 class="section-title text-center">{{ .Title }}</h2>
-				<p class="lead main text-center">{{ .RawContent }}</p>
+				<p class="lead main text-center">{{ .Params.subtitle }}</p>
 			{{ end }}
             <div class="row text-center about-us">
 			{{ range where $.Pages ".Section" "=" "aboutus"}}
@@ -64,13 +64,15 @@
             </div>
             
 		{{ range first 1 (where .Site.Pages "Type" "=" "newsSection") }}
-		<p class="lead main">&nbsp;</p>
-		<h2 class="section-title text-center">{{ .Title }}</h2>
-		<div class="news-items">
-			{{ range where $.Pages ".Section" "=" "news"}}
-				{{ .Content }}
+			{{ if not .Draft }}
+			<p class="lead main">&nbsp;</p>
+			<h2 class="section-title text-center">{{ .Title }}</h2>
+			<div class="news-items">
+				{{ range where $.Pages ".Section" "=" "news"}}
+					{{ .Content }}
+				{{ end }}
+			</div>
 			{{ end }}
-		</div>
 		{{ end }}
         </div>
         <section class="ss-style-bottom"></section>
@@ -81,10 +83,10 @@
         <div class="container inner">
 			{{ range first 1 (where .Site.Pages "Type" "=" "contactSection") }}
 			<h2 class="section-title text-center">{{ .Title }}</h2>
-			<p class="lead contact main text-center contacts">{{ .RawContent }}</p>
+			<p class="lead contact main text-center contacts">{{ .Params.subtitle }}</p>
             <div class="row">
                 <div class="col-md-8">
-                <iframe src="https://{{ .Params.description}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://{{ .Params.map}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-4">
                 {{ range where $.Pages ".Section" "=" "contact"}}
