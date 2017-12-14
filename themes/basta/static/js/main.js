@@ -1,11 +1,19 @@
 // scrollUtil.js
 // TODO animateScrollDownArrow in CSS
+function changeHistory(hashPath) {
+	if (/(MSIE\ [0-9]{1})/i.test(navigator.userAgent)) {
+		var path = window.location.pathname.split('#')[0] + hashPath;
+		window.location = path;
+	} else {
+		window.history.pushState(null, null, hashPath);
+	}
+}
 function smoothScrollTo(e) {
 	var me = this;
 	var target = $(me.hash);
 	if (target.length) {
 		$('html, body').animate({scrollTop: target.offset().top}, 600, function () {
-			window.history.pushState(null, null, me.hash);
+			changeHistory(me.hash);
 		});
 		return false;
 	}
