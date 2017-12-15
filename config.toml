@@ -2,8 +2,6 @@ baseURL = "http://dobrabasta.sk/"
 languageCode = "sk-SK"
 title = "Dobrá Bašta"
 
-theme = "basta"
-
 [params]
 currency = "€"
 subtitle = "Poctivá domáca kuchyňa"
