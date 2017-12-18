@@ -434,7 +434,8 @@ section::before,section::after {
     }
 }
 .modal-dialog {
-	width: 50vw;
+	width: 95vw;
+	max-width: 1170px;
 }
 .modal-content .hot-tag {
 	display: none;
