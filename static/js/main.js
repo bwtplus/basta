@@ -25,11 +25,17 @@ function initScroll() {
 
 // fetchFoot.js
 function addGallery() {
-	$('.thumbnail').click(function(){
-		  $('.modal-body').empty();
-		var title = $(this).parent('a').attr("title");
-		$('.modal-title').html(title);
-		$($(this).parents('div').html()).appendTo('.modal-body');
+	$('.img-placeholder').click(function(){
+		//$('.modal-title').empty();
+		$('.modal-img').empty();
+		//$('.modal-description').empty();
+		var img = '<img src="'+this.style[this.style[0]].replace('url(','').replace(')','').replace(/\"/gi, "")+'"/>';
+		//var title = $(this).parent('a').parent('div').parent('div').find('h3').text();
+		//var description = $(this).parent('a').parent('div').parent('div').find('p').text();
+		$(img).appendTo('.modal-img');
+		//$('<h3>'+title+'</h3>').appendTo('.modal-title');
+		//$('<span>'+description+'</span>').appendTo('.modal-description');
+		$('.modal-open').style='';
 		$('#myModal').modal({show:true});
 	});
 }
@@ -50,11 +56,12 @@ function updateFoodMenu(data) {
 	});
 	var template = '<div class="col-md-6 col-sm-6">' +
 		' 	<div class="pricing-item">' +
-		' 		<a href="#" data-toggle="modal">' +
-		' 			<img class="img-responsive thumbnail" src="{photo}" alt="">' +
-		' 		</a>' +
+		'           <a href="#" data-toggle="modal">' +
+		'		 	  <div class="img-placeholder" style="background-image:url(\'{photo}\');">'+
+		'			  </div>'+
+		'   		</a>' +
 		'	  	<div class="pricing-item-details">' +
-		'		  	<h3><a href="#food-menu">{name}</a></h3>' +
+		'		  	<h3>{name}</h3>' +
 		'			<p>{description}</p>' +
 		' 		</div>' +
 		'	  	<span class="hot-tag br-red">{price}</span>' +
@@ -75,6 +82,7 @@ function updateFoodMenu(data) {
 		}
 		return acc;
 	}, '');
+	
 	$("#upadatedMenu").html(foodMenuContent);
 	addGallery();
 }

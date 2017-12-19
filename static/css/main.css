@@ -280,8 +280,16 @@ section::before,section::after {
     position:relative;
     margin-top:40px;
     margin-bottom:10px;
+	min-height:212px;
 }
-.pricing .pricing-item img {
+.img-placeholder{
+	min-height: 160px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+	margin-right:4px;
+	min-width:50%;
     max-width:250px;
     float:left;
 }
@@ -387,7 +395,7 @@ section::before,section::after {
         margin-left: 0;
     }
 
-    .pricing .pricing-item a img {
+    .pricing .pricing-item a .img-placeholder {
         float: none;
         margin-bottom: 30px;
     }
@@ -437,6 +445,8 @@ section::before,section::after {
 	width: 95vw;
 	max-width: 1170px;
 }
-.modal-content .hot-tag {
-	display: none;
+.modal-dialog img {
+	width: 100%;
+	height: auto;
+	padding: 8px;
 }
