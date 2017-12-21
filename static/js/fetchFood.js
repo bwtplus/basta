@@ -1,6 +1,5 @@
 function addGallery() {
 	$('.img-placeholder').click(function(){
-
 		$('.modal-title').empty();
 		$('.modal-img').empty();
 		$('.modal-description').empty();
@@ -25,37 +24,30 @@ export function fetchFoodMenu(success, error) {
 	});
 }
 
+function fillTemplate(meal) {
+	return `
+		<div class="col-md-6 col-sm-6">
+			<div class="pricing-item">      
+				<div class="img-placeholder" style="background-image:url('${meal.photo}');">
+				</div>
+				<div class="pricing-item-details">
+					<h3>${meal.name}</h3>
+					<p>${meal.description}</p>
+				</div>
+				<span class="hot-tag br-red">${meal.price}</span>
+				<div class="clearfix"></div>
+			</div>
+		</div>`;
+}
+
 export function updateFoodMenu(data) {
-	var list = $.map(data, function (value, index) {
-		return value;
-	});
-	var template = '<div class="col-md-6 col-sm-6">' +
-		' 	<div class="pricing-item">' +      
-		'		 	  <div class="img-placeholder" style="background-image:url(\'{photo}\');">'+
-		'			  </div>'+
-		'	  	<div class="pricing-item-details">' +
-		'		  	<h3>{name}</h3>' +
-		'			<p>{description}</p>' +
-		' 		</div>' +
-		'	  	<span class="hot-tag br-red">{price}</span>' +
-		'	  	<div class="clearfix"></div>' +
-		'	 </div>' +
-		'</div>';
-	var fillTemplate = function (template, dataItem) {
-		var result = template;
-		for (var propertyName in dataItem) {
-			result = result.replace('{' + propertyName + '}', dataItem[propertyName]);
-		}
-		return result;
-	}
-	var foodMenuContent = list.reduce(function (acc, val, id) {
-		acc += fillTemplate(template, val);
+	const foodMenuContent = Object.values(data).reduce((acc, val, id) => {
+		acc += fillTemplate(val);
 		if (id % 2 === 1) {
 			acc += '<div class="clearfix"></div>';
 		}
 		return acc;
 	}, '');
-	
 	$("#upadatedMenu").html(foodMenuContent);
 	addGallery();
 }

@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: [
     './static/js/main.js',
-    './static/css/style.scss'
+    './static/scss/style.scss'
   ],
   output: {
     filename: 'bundle.js',
@@ -16,6 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
+        include: path.resolve(__dirname, 'static/scss'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader', 
           use: ['css-loader', 'sass-loader']
@@ -32,6 +33,25 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'static/js'),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {
+                targets: {
+                  browsers: ['last 2 versions']
+                },
+                modules: false
+              }
+              ]
+            ],
+            plugins: ['transform-runtime']
+          }
+        }
       }
     ]
   },
