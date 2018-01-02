@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700);@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Kurale:300,400,700);@import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700);@charset "UTF-8";
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -8555,7 +8555,7 @@ button.close {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 body {
-  font-family: 'Kreon',serif;
+  font-family: 'Kurale','Kreon',serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -8891,8 +8891,6 @@ section::before, section::after {
   transition: opacity 350ms ease;
   width: 52px;
   height: 52px;
-  border: solid white 1px;
-  border-radius: 5px;
   padding: 4px 14px 4px 4px; }
 
 .social-bar a:hover {

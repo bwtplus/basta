@@ -1,10 +1,11 @@
 $primary-color: #ed0121; // dark red
 
 // Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Kurale:300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700);
 
 body {
-    font-family: 'Kreon',serif;
+    font-family: 'Kurale','Kreon',serif;
 	font-size: 16px;
     -webkit-font-smoothing:antialiased;
     -webkit-text-size-adjust:100%;
@@ -350,8 +351,6 @@ section::before,section::after {
     transition:opacity 350ms ease;
 	width: 52px;
 	height: 52px;
-	border: solid white 1px;
-	border-radius: 5px;
 	padding: 4px 14px 4px 4px;
 }
 .social-bar a:hover {
