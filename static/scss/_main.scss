@@ -231,16 +231,6 @@ section::before,section::after {
     padding:0;
     list-style:none;
 }
-.menu-images img {
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-    border:5px solid #dadada;
-    display:block;
-    margin:auto;
-    margin-top: 40px;
-}
-
 
 .hot-tag {
     position:absolute;
@@ -261,12 +251,6 @@ section::before,section::after {
 .br-red {
     background-color:$primary-color !important;
 }
-.br-lblue {
-    background-color:#32c8de !important;
-}
-.br-green {
-    background-color:#51d466 !important;
-}
 .pricing {
     border-top:1px solid #f1f1f1;
 }
@@ -283,23 +267,19 @@ section::before,section::after {
 	background-size: cover;
 	border-radius: 10px;
 	margin-right:4px;
-	min-width:50%;
+	width: 50%;
+	min-width:284px;
     max-width:250px;
     float:left;
 }
 .pricing-item-details a,.pricing-item-details p,.pricing .lead {
     color:black;
 }
-.pricing .pricing-item .pricing-item-details {
-    margin-left:265px;
-}
 .pricing .pricing-item .pricing-item-details h3 {
-    margin-top:0;
-    margin-bottom:8px;
     font-size:22px;
 	font-weight:bold;
-}
-.pricing .pricing-item .pricing-item-details p {
+	display: inline-block;
+	width: 48%;
 }
 .pricing .pricing-item .pricing-item-details a.btn {
     margin-top:10px;
