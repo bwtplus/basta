@@ -8567,7 +8567,6 @@ img {
 section {
   position: relative;
   padding: 0;
-  background: #F0A830;
   color: #FFF;
   text-align: center; }
 
@@ -8749,9 +8748,6 @@ section::before, section::after {
   color: #FFF;
   padding-bottom: 32px; }
 
-.parallax.parallax2 {
-  background-image: url(3a1e489e0e9152299f38fdeb9ad5848e.jpg); }
-
 .bm10 {
   margin-bottom: 10px !important; }
 
@@ -8919,10 +8915,6 @@ section::before, section::after {
 .social-bar a:hover {
   opacity: 0.5;
   filter: alpha(opacity=50); }
-
-.themeBy {
-  color: #ed0121;
-  background: white; }
 
 @media (max-width: 991px) {
   .pricing .pricing-item .pricing-item-details {
