@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -55,7 +54,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'eval',
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -64,8 +63,6 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
     new ExtractTextPlugin("bundle.css"),
-    new UglifyJsPlugin({
-      sourceMap: true
-    })
+    
   ]
 };
