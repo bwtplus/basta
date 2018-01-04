@@ -36,17 +36,14 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+		options: {
+		  name (file) {
+		    return '[name].[ext]'
+		  }
+		}
       }, 
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader'
-        ]
-      },
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'static/js'),
