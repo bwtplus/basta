@@ -18,7 +18,21 @@ module.exports = {
         include: path.resolve(__dirname, 'static/scss'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader', 
-          use: ['css-loader', 'sass-loader']
+          use: [
+            {
+                loader: 'css-loader',
+                options: {
+                    minimize: true,
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
+            }
+          ]
         })
       },
       {
