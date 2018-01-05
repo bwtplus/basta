@@ -1,0 +1,47 @@
+// Footer 
+
+.social-bar {
+    width:100%;
+    text-align:right;
+	@media (max-width:767px) {
+		text-align: left;
+		margin-top: 30px;
+	}
+	a {
+		display:inline-block;
+		margin-right:11px;
+		font-size:2.15em;
+		text-decoration:none;
+		color:#fff;
+		opacity:1;
+		filter:alpha(opacity=100);
+		transition:opacity 350ms ease;
+		width: 52px;
+		height: 52px;
+		padding: 4px 14px 4px 4px;
+		&:hover {
+			opacity:0.5;
+			filter: alpha(opacity=50);
+		}
+	}
+}
+
+// Modal dialog
+.modal-dialog {
+	width: 95vw;
+	max-width: 1170px;
+	img {
+		width: 100%;
+		height: auto;
+		padding: 8px;
+	}
+}
+
+/* TODO
+- ostatne: nested scss
+- white color do premennej
+- 767px nahradit bootstrap premennou / @media nahradit bootstrap mixinmi
+=> radsej pisat (bootstrap -sm-) classy ako pravidla (@media)
+- postcss autoprefixer, zahodit mixin
+- paddingy zosuladit/nahradit bootstrap paddingom
+*/

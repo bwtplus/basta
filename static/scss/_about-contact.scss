@@ -1,0 +1,22 @@
+// About us section
+
+.about-us .icon-wrapper i {
+    font-size:70px;
+}
+
+
+// News section
+.news-items p {
+	text-align:center;
+	border-bottom:1px dotted #aeaeae;
+	padding-bottom: 14px;
+}
+
+
+// Contact section
+.contact {
+	color: white;
+	a {
+		color: $brand-primary !important;
+	}
+}
