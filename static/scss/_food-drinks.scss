@@ -30,7 +30,7 @@
     text-align:center;
     font-weight:700;
     color:#fff;
-    @include border-radius(100px);
+    border-radius: 100px;
 }
 .br-red {
     background-color:$brand-primary !important;
@@ -70,9 +70,6 @@
 				font-size:12px;
 				border-bottom:1px dotted #aeaeae;
 			}
-			@media (max-width: 991px){
-				margin-left: 0;
-			}
 		}
 	}
 }
@@ -87,13 +84,8 @@
     max-width:250px;
     float:left;
 	cursor: pointer;
-	@include border-radius(10px);
-	@media (max-width: 991px){
-		float: none;
-        margin-bottom: 30px;
-    }
+	border-radius: 10px;
 }
-
 
 // Drinks section
 .drinks	{
@@ -103,7 +95,7 @@
 		padding: 2px;
 		white-space: nowrap;
 	}
-}	
+}
 .drink-name {
 	color: $brand-primary;
 	font-weight: bold;

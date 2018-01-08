@@ -14,9 +14,6 @@
 		color:$brand-primary;
 		font-size:38px;
 		padding:2px 15px;
-		@media (max-width:767px) {
-			font-size: 22px;
-		}
 	}
 	.center {
 		position:relative;
@@ -35,9 +32,6 @@
 			display:inline-block;
 			background: $brand-primary;
 			padding:6px 18px 0px 18px;
-			@media (max-width:767px) {
-				font-size:60px;
-			}
 		}
 	}
 	.bottom {
@@ -98,18 +92,16 @@
 }
 
 #logo {
-	@media (min-width:768px) {
-        position:absolute;
-        display:block !important;
-        width:165px;
-        left:50%;
-        margin-left:-75px;
-        background:$font-color-light;
-		border: gray solid;
-		border-width: 2px;
-        padding: 12px;
-		@include border-radius(0 0 100% 100%);
-    }
+	position:absolute;
+	display:block;
+	width:165px;
+	left:50%;
+	margin-left:-75px;
+	background:$font-color-light;
+	border: gray solid;
+	border-width: 2px;
+	padding: 12px;
+	border-radius: 0 0 100% 100%;
 }
 
 // Title section
