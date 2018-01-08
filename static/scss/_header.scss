@@ -10,7 +10,7 @@
     height: 100vh;
 	.subtitle h4 {
 		display:inline-block;
-		background:white;
+		background:$font-color-light;
 		color:$brand-primary;
 		font-size:38px;
 		padding:2px 15px;
@@ -21,7 +21,7 @@
 	.center {
 		position:relative;
 		z-index:1;
-		color:white;
+		color:$font-color-light;
 		padding-top: calc(80vh / 2);
 		.slogan {
 			font-size:26px;
@@ -29,7 +29,7 @@
 		}
 		.banner h1 {
 			font-size:100px;
-			color:white;
+			color:$font-color-light;
 			text-transform:uppercase;
 			font-weight:bold;
 			display:inline-block;
@@ -41,14 +41,14 @@
 		}
 	}
 	.bottom {
-		color:white;
+		color:$font-color-light;
 		text-align:center;
 		width:100%;
 		position:absolute;
 		bottom:60px;
 		a {
 			font-size:36px;
-			color:whitesmoke;
+			color: whitesmoke;
 			position:relative;
 		}
 	}
@@ -65,7 +65,7 @@
 	h2 {
 		margin-top:0;
 		font-weight:bold;
-		color:white;
+		color:$font-color-light;
 	}
 }
 .navbar-nav{
@@ -88,7 +88,7 @@
 	.navbar-nav{
 		>li>a {
 			transition:all 0.4s;
-			color:white;
+			color:$font-color-light;
 			font-weight:bold;
 		}
 		>.active>a, >.active>a:focus, >.active>a:hover{
@@ -104,7 +104,7 @@
         width:165px;
         left:50%;
         margin-left:-75px;
-        background:white;
+        background:$font-color-light;
 		border: gray solid;
 		border-width: 2px;
         padding: 12px;
@@ -129,8 +129,6 @@
     line-height:24px;
     font-weight:normal;
     text-transform:uppercase;
-    margin-bottom:15px;
-    color:#2e2e2e;
     position:relative;
 	&:after {
 		position:absolute;

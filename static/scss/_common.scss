@@ -63,6 +63,7 @@ section::before,section::after {
 
 .light-wrapper {
     background:$bg-color;
+	color:$font-color-dark;
 }
 .inner {
     padding-top:112px;
@@ -71,7 +72,7 @@ section::before,section::after {
 
 .dark-wrapper {
     background:$brand-primary;
-    color:white;
+    color:$font-color-light;
     font-size:20px;
     font-weight:bold;
 	.ss-style-top::before {

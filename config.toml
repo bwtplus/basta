@@ -5,7 +5,7 @@ title = "Dobrá Bašta"
 [params]
 currency = "€"
 subtitle = "Poctivá domáca kuchyňa"
-jsonMenuUrl="js/updatedoffer.js"
+jsonMenuUrl="data/offer.json"
 
 facebook = "http://www.facebook.com/pages/dobrabasta"
 zomato = "https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-v"

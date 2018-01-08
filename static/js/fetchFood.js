@@ -1,15 +1,8 @@
 function addGallery() {
 	$('.img-placeholder').click(function(){
-		$('.modal-title').empty();
 		$('.modal-img').empty();
-		$('.modal-description').empty();
-		var img = '<img src="'+this.style[this.style[0]].replace('url(','').replace(')','').replace(/\"/gi, "")+'"/>';
-		var title = $(this).parent('div').parent('div').find('h3').text();
-		var description = $(this).parent('div').parent('div').find('p').text();
+		const img = `<img src="${this.dataset.url}" alt="${this.dataset.title}" title="${this.dataset.title}"/>`;
 		$(img).appendTo('.modal-img');
-		$('<h3>'+title+'</h3>').appendTo('.modal-title');
-		$('<span>'+description+'</span>').appendTo('.modal-description');
-		//$('.modal-open').style='';
 		$('#myModal').modal({show: true});
 	});
 }
@@ -28,7 +21,7 @@ function fillTemplate(meal) {
 	return `
 		<div class="col-md-6 col-sm-6">
 			<div class="pricing-item">      
-				<div class="img-placeholder" style="background-image:url('${meal.photo}');">
+				<div class="img-placeholder" style="background-image:url('${meal.photo}');" data-url="${meal.photo}" data-title="${meal.name}">
 				</div>
 				<div class="pricing-item-details">
 					<h3>${meal.name}</h3>
