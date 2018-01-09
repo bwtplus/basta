@@ -38,13 +38,11 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            return '[name].[ext]'
-          }
-        }
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        loaders: [
+            'file-loader?hash=sha512&digest=hex&name=[name].[ext]',
+            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,

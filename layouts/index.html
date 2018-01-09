@@ -99,8 +99,7 @@
 				<table width="100%">
 					<tr>
 						<td width="5%">&nbsp;</td>
-						<td width="90%"><div class="drink-category-title">{{
-								$key }}</div></td>
+						<td width="90%"><div class="drink-category-title">{{ $key }}</div></td>
 						<td width="5%">&nbsp;</td>
 					</tr>
 					{{ range $taxonomy.Pages }}
@@ -108,8 +107,7 @@
 						<td width="5%">{{ .Params.volume }}</td>
 						<td width="90%"><span class="drink-name">{{ .Title }}</span>
 							{{ .Description}}</td>
-						<td width="5%">{{ .Params.price }} {{ $.Site.Params.currency
-							}}</td>
+						<td width="5%">{{ .Params.price }} {{ $.Site.Params.currency }}</td>
 					</tr>
 					{{ end }}
 				</table>
@@ -122,8 +120,7 @@
 	<div id="about-us" class="light-wrapper">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
-			{{ range where (where .Site.Pages "Type" "=" "about-us")
-			".Params.subtitle" "ne" "" }}
+			{{ range where (where .Site.Pages "Type" "=" "about-us") ".Params.subtitle" "ne" "" }}
 			<h2 class="section-title text-center">{{ .Title }}</h2>
 			<p class="lead main text-center">{{ .Params.subtitle }}</p>
 			{{ end }}
@@ -141,12 +138,10 @@
 				{{ end }}
 			</div>
 
-			{{ range first 1 (where .Site.Pages "Type" "=" "newsSection") }} {{
-			if not .Draft }}
+			{{ range first 1 (where .Site.Pages "Type" "=" "newsSection") }} {{ if not .Draft }}
 			<p class="lead main">&nbsp;</p>
 			<h2 class="section-title text-center">{{ .Title }}</h2>
-			<div class="news-items">{{ range where $.Pages ".Section" "="
-				"news"}} {{ .Content }} {{ end }}</div>
+			<div class="news-items">{{ range where $.Pages ".Section" "=" "news"}} {{ .Content }} {{ end }}</div>
 			{{ end }} {{ end }}
 		</div>
 		<section class="ss-style-bottom"></section>
@@ -158,8 +153,7 @@
 		<div class="container inner">
 			{{ range first 1 (where .Site.Pages "Type" "=" "contactSection") }}
 			<h2 class="section-title text-center">{{ .Title }}</h2>
-			<p class="lead contact main text-center contacts">{{
-				.Params.subtitle }}</p>
+			<p class="lead contact main text-center contacts">{{ .Params.subtitle }}</p>
 			<div class="row">
 				<div class="col-md-8">
 					<iframe src="https://{{ .Params.map}}" width="600" height="450"
@@ -190,8 +184,7 @@
 							class="fa fa-facebook tooltipped" title="Facebook"
 							target="_blank"></a> {{ end }} {{ if $.Site.Params.zomato }}<a
 							href="{{ $.Site.Params.zomato }}" class="fa fa-spoon tooltipped"
-							title="Zomato" target="_blank"></a>{{ end }} {{ if
-						$.Site.Params.googleplus }}<a
+							title="Zomato" target="_blank"></a>{{ end }} {{ if $.Site.Params.googleplus }}<a
 							href="{{ $.Site.Params.googleplus }}"
 							class="fa fa-google-plus tooltipped" title="Google+"
 							target="_blank"></a>{{ end }}
