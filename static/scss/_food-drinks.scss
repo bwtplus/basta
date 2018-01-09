@@ -1,42 +1,42 @@
 // Food menu section
 
 .menu-items {
-    text-align:center;
-    margin:0 auto;
+	text-align:center;
+	margin:0 auto;
 }
 .menu-titles h1 {
-    text-shadow:none;
-    color:$brand-primary;
-    text-align:center;
-    margin:0 auto;
-    padding-top:30px;
-    padding-bottom:15px;
+	text-shadow:none;
+	color:$brand-primary;
+	text-align:center;
+	margin:0 auto;
+	padding-top:30px;
+	padding-bottom:15px;
 }
 #food-menu ul {
-    margin:0;
-    padding:0;
-    list-style:none;
+	margin:0;
+	padding:0;
+	list-style:none;
 }
 
 .hot-tag {
-    position:absolute;
-    bottom:0;
-    right:0;
-    z-index:15;
-    display:inline-block;
-    width:80px;
-    height:80px;
-    line-height:90px;
-    text-align:center;
-    font-weight:700;
-    color:#fff;
-    border-radius: 100px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:15;
+	display:inline-block;
+	width:80px;
+	height:80px;
+	line-height:90px;
+	text-align:center;
+	font-weight:700;
+	color:#fff;
+	border-radius: 100px;
 }
 .br-red {
-    background-color:$brand-primary !important;
+	background-color:$brand-primary !important;
 }
 .pricing {
-    border-top:1px solid #f1f1f1;
+	border-top:1px solid #f1f1f1;
 
 	.pricing-item {
 		position:relative;
@@ -81,8 +81,8 @@
 	margin-right:4px;
 	width: 50%;
 	min-width:284px;
-    max-width:250px;
-    float:left;
+	max-width:250px;
+	float:left;
 	cursor: pointer;
 	border-radius: 10px;
 }
