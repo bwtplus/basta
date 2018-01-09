@@ -17,28 +17,22 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'static/scss'),
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader', 
+          fallback: 'style-loader',
           use: [
-			{
-              loader: 'css-loader',
-              options: { importLoaders: 1 ,
-					minimize: true,
-                    sourceMap: true
-                }
-            
-            },
-/*			{
-			  loader: 'postcss-loader',
-			  options: {
-				plugins: () => [require('autoprefixer')]
-			  }
-			},
-*/
             {
-                loader: 'sass-loader',
-                options: {
-                    sourceMap: true
-                }
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                minimize: true,
+                sourceMap: true
+              }
+
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
             }
           ]
         })
@@ -46,20 +40,20 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
-		options: {
-		  name (file) {
-		    return '[name].[ext]'
-		  }
-		}
+        options: {
+          name(file) {
+            return '[name].[ext]'
+          }
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
-		options: {
-		  name (file) {
-		    return '[name].[ext]'
-		  }
-		}
+        options: {
+          name(file) {
+            return '[name].[ext]'
+          }
+        }
       },
       {
         test: /\.js$/,
@@ -91,6 +85,6 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
     new ExtractTextPlugin("bundle.css"),
-    
+
   ]
 };
