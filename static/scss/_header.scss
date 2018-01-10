@@ -14,6 +14,9 @@
 		color:$brand-primary;
 		font-size:38px;
 		padding:2px 15px;
+		@media (max-width:$container-tablet) {
+			font-size: 26px;
+		}
 	}
 	.center {
 		position:relative;
@@ -32,6 +35,9 @@
 			display:inline-block;
 			background: $brand-primary;
 			padding:6px 18px 0px 18px;
+			@media (max-width:$container-tablet) {
+				font-size:52px !important;
+			}
 		}
 	}
 	.bottom {

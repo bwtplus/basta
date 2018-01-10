@@ -96,18 +96,18 @@
 
 			<div class="row drinks">
 				{{ range $key, $taxonomy := .Site.Taxonomies.categories }}
-				<table width="100%">
+				<table>
 					<tr>
-						<td width="5%">&nbsp;</td>
-						<td width="90%"><div class="drink-category-title">{{ $key }}</div></td>
-						<td width="5%">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><div class="drink-category-title">{{ $key }}</div></td>
+						<td>&nbsp;</td>
 					</tr>
 					{{ range $taxonomy.Pages }}
 					<tr>
-						<td width="5%">{{ .Params.volume }}</td>
-						<td width="90%"><span class="drink-name">{{ .Title }}</span>
+						<td>{{ .Params.volume }}</td>
+						<td><span class="drink-name">{{ .Title }}</span>
 							{{ .Description}}</td>
-						<td width="5%">{{ .Params.price }} {{ $.Site.Params.currency }}</td>
+						<td>{{ .Params.price }} {{ $.Site.Params.currency }}</td>
 					</tr>
 					{{ end }}
 				</table>

@@ -3,6 +3,8 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const PostCssImport = require("postcss");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -83,6 +85,40 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
     new ExtractTextPlugin("bundle.css"),
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
+    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+	new HtmlWebpackPlugin({
+      title: 'Dobrá Bašta',
+      filename: 'layouts/index.html',
+	  favicon: '',
+	  minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: false,
+        removeStyleLinkTypeAttributes: false
+      }
+    }),
+	new FaviconsWebpackPlugin({
+		logo: '.\\static\\img\\logo.png',
+		prefix: 'icons/',
+		emitStats: true,
+		// The name of the json containing all favicon information
+		statsFilename: 'iconstats.json',
+		persistentCache: true,
+		// Inject the html into the html-webpack-plugin
+		inject: true,
+		icons: {
+		  android: true,
+		  appleIcon: true,
+		  appleStartup: true,
+		  coast: false,
+		  favicons: true,
+		  firefox: true,
+		  opengraph: false,
+		  twitter: false,
+		  yandex: false,
+		  windows: false
+		}
+	  })
   ]
 };
