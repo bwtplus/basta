@@ -5,6 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const PostCssImport = require("postcss");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Compression = require('compression-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -86,18 +87,6 @@ module.exports = {
     }),
     new ExtractTextPlugin("bundle.css"),
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-	new HtmlWebpackPlugin({
-      title: 'Dobrá Bašta',
-      filename: '.\\layouts\\index.html',
-	  favicon: '.\\static\\dist\\icons\\favicon.ico',
-	  minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: false,
-        removeStyleLinkTypeAttributes: false
-      }
-    }),
 	new FaviconsWebpackPlugin({
 		logo: '.\\static\\img\\logo.png',
 		prefix: 'icons/',
@@ -119,6 +108,10 @@ module.exports = {
 		  yandex: false,
 		  windows: false
 		}
-	  })
+	}),
+	new Compression({
+		asset: '{file}.gz',
+		algorithm: 'gzip'
+	})
   ]
 };
