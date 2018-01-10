@@ -5,7 +5,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const PostCssImport = require("postcss");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Compression = require('compression-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -108,10 +107,6 @@ module.exports = {
 		  yandex: false,
 		  windows: false
 		}
-	}),
-	new Compression({
-		asset: '{file}.gz',
-		algorithm: 'gzip'
 	})
   ]
 };
