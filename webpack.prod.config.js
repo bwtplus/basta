@@ -88,8 +88,8 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 	new HtmlWebpackPlugin({
       title: 'Dobrá Bašta',
-      filename: 'layouts/index.html',
-	  favicon: '',
+      filename: '.\\layouts\\index.html',
+	  favicon: '.\\static\\dist\\icons\\favicon.ico',
 	  minify: {
         collapseWhitespace: true,
         removeComments: true,
