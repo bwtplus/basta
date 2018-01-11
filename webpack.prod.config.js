@@ -1,8 +1,8 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const PostCssImport = require("postcss");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -21,7 +21,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            {
+	          {
               loader: 'css-loader',
               options: {
                 minimize: true,
@@ -38,20 +38,33 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            return '[name].[ext]'
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        include: [
+          path.resolve(__dirname, 'static/img')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true
+            }
           }
-        }
+        ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            return '[name].[ext]'
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
           }
         }
       },
@@ -62,12 +75,14 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['env', {
-                targets: {
-                  browsers: ['last 2 versions']
-                },
-                modules: false
-              }
+              [
+                'env',
+                {
+                  targets: {
+                    browsers: ['last 2 versions']
+                  },
+                  modules: false
+                }
               ]
             ],
             plugins: ['transform-runtime']
@@ -85,6 +100,11 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
     new ExtractTextPlugin("bundle.css"),
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
+    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, 'static/img/logo.png'),
+      prefix: 'icons/',
+      statsFilename: 'iconstats.json',
+    })
   ]
 };
