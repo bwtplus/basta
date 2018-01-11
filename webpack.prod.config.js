@@ -42,8 +42,8 @@ module.exports = {
       {
         test: /\.(png|svg|jpe?g|gif)$/i,
         loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[name].[ext]',
-            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          'file-loader?hash=sha512&digest=hex&name=[name].[ext]',
+          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
       {
@@ -62,12 +62,14 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['env', {
-                targets: {
-                  browsers: ['last 2 versions']
-                },
-                modules: false
-              }
+              [
+                'env',
+                {
+                  targets: {
+                    browsers: ['last 2 versions']
+                  },
+                  modules: false
+                }
               ]
             ],
             plugins: ['transform-runtime']
@@ -86,27 +88,27 @@ module.exports = {
     }),
     new ExtractTextPlugin("bundle.css"),
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-	new FaviconsWebpackPlugin({
-		logo: '.\\static\\img\\logo.png',
-		prefix: 'icons/',
-		emitStats: true,
-		// The name of the json containing all favicon information
-		statsFilename: 'iconstats.json',
-		persistentCache: true,
-		// Inject the html into the html-webpack-plugin
-		inject: true,
-		icons: {
-		  android: true,
-		  appleIcon: true,
-		  appleStartup: true,
-		  coast: false,
-		  favicons: true,
-		  firefox: true,
-		  opengraph: false,
-		  twitter: false,
-		  yandex: false,
-		  windows: false
-		}
-	})
+    new FaviconsWebpackPlugin({
+      logo: '.\\static\\img\\logo.png',
+      prefix: 'icons/',
+      emitStats: true,
+      // The name of the json containing all favicon information
+      statsFilename: 'iconstats.json',
+      persistentCache: true,
+      // Inject the html into the html-webpack-plugin
+      inject: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    })
   ]
 };

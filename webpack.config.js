@@ -26,7 +26,6 @@ module.exports = {
                 minimize: true,
                 sourceMap: true
               }
-
             },
             {
               loader: 'sass-loader',
@@ -62,12 +61,14 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['env', {
-                targets: {
-                  browsers: ['last 2 versions']
-                },
-                modules: false
-              }
+              [
+                'env',
+                {
+                  targets: {
+                    browsers: ['last 2 versions']
+                  },
+                  modules: false
+                }
               ]
             ],
             plugins: ['transform-runtime']
@@ -84,7 +85,6 @@ module.exports = {
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
     }),
-    new ExtractTextPlugin("bundle.css"),
-
+    new ExtractTextPlugin("bundle.css")
   ]
 };
