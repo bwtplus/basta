@@ -1,10 +1,8 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const PostCssImport = require("postcss");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -41,17 +39,32 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/i,
-        loaders: [
-          'file-loader?hash=sha512&digest=hex&name=[name].[ext]',
-          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        include: [
+          path.resolve(__dirname, 'static/img')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true
+            }
+          }
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            return '[name].[ext]'
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
           }
         }
       },
@@ -89,26 +102,9 @@ module.exports = {
     new ExtractTextPlugin("bundle.css"),
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
     new FaviconsWebpackPlugin({
-      logo: '.\\static\\img\\logo.png',
+      logo: path.resolve(__dirname, 'static/img/logo.png'),
       prefix: 'icons/',
-      emitStats: true,
-      // The name of the json containing all favicon information
       statsFilename: 'iconstats.json',
-      persistentCache: true,
-      // Inject the html into the html-webpack-plugin
-      inject: true,
-      icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: true,
-        coast: false,
-        favicons: true,
-        firefox: true,
-        opengraph: false,
-        twitter: false,
-        yandex: false,
-        windows: false
-      }
     })
   ]
 };
