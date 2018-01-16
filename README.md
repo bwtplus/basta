@@ -14,7 +14,7 @@
 	> hugo
 
 
-#Basta on FORESTRY
+# Basta on FORESTRY
 
 ### frontend
 	https://dobrabasta.bitbucket.io/
@@ -26,7 +26,7 @@
 
 
 
-#Basta on NETLIFY
+# Basta on NETLIFY
 
 ### frontend
 	https://basta.netlify.com
