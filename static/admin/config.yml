@@ -13,7 +13,7 @@ collections:
     fields: 
       - {label: "Názov", name: "title", widget: "text"}
       - {label: "Popis", name: "description", widget: "text"}
-      - {label: "Kategórie", name: "categories", widget: "list", default" ["Nealko","Pivo"]}
+      - {label: "Kategórie", name: "categories", widget: "list", default: ["Nealko","Pivo"]}
       - {label: "Cena", name: "price", widget: "text", default: "0,99"}
       - {label: "Objem", name: "volume", widget: "text", default: "0,5 l"}
   - name: news
