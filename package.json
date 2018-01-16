@@ -34,6 +34,7 @@
     "jquery": "^3.2.1",
     "netlify": "^1.2.0",
     "netlify-cli": "^1.2.2",
+    "netlify-identity-widget": "^1.4.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "popper": "^1.0.1"
   }

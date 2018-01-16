@@ -1,7 +1,6 @@
 backend:
   name: github
-  repo: matokov/BastaRepo
-  branch: master # Branch to update (optional; defaults to master)
+  repo: beweteplus/basta
 
 media_folder: "static/data/img"
 
@@ -16,22 +15,26 @@ collections:
       - {label: "Kategórie", name: "categories", widget: "list", default: ["Nealko","Pivo"]}
       - {label: "Cena", name: "price", widget: "text", default: "0,99"}
       - {label: "Objem", name: "volume", widget: "text", default: "0,5 l"}
+      
   - name: news
     label: "Oznamy"
     folder: "content/news"
     create: true
     fields: 
+      - {label: "Hidden", name: "title", widget: "hidden", default: "hidden"}
       - {label: "Poradie", name: "weight", widget: "list", default: ["1","2","3","4","5","6","7","8","9"]}
       - {label: "Text oznamu", name: "content", widget: "text"}
+      
   - name: contact
     label: "Kontakt"
     folder: "content/contact"
     create: false
     fields: 
       - {label: "Poradie", name: "weight", widget: "list", default: ["1","2","3"]}
-      - {label: "Nadpis", name: "tite", widget: "text"}
+      - {label: "Nadpis", name: "title", widget: "text"}
       - {label: "Ikona", name: "description", widget: "list", default: ["fa-clock-o","fa-map-marker","fa-mobile"]}
       - {label: "Text sem", name: "content", widget: "text"}
+
   - name: aboutus
     label: "O nás"
     folder: "content/aboutus"
@@ -41,6 +44,7 @@ collections:
       - {label: "Nadpis", name: "title", widget: "text"}
       - {label: "Ikona", name: "description", widget: "list", default: ["fa-anchor","fa-cutlery","fa-coffee"]}
       - {label: "Text sem", name: "content", widget: "text"}
+
   - name: sections
     label: "Sekcie"
     folder: "content"
