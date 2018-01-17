@@ -1,6 +1,6 @@
 # Basta Web
 
-# Basta web on local machine
+## Basta web on local machine
 
 ### webpack dev build
 	> npm run build
@@ -14,7 +14,7 @@
 	> hugo
 
 
-# Basta on FORESTRY
+## Basta on FORESTRY
 
 ### frontend
 	https://dobrabasta.bitbucket.io/
@@ -26,12 +26,12 @@
 
 
 
-# Basta on NETLIFY
+## Basta on NETLIFY
 
 ### frontend
 	https://basta.netlify.com
  
-###  admin section
+### admin section
 	netlify settings
 		https://app.netlify.com/sites/basta/overview
 	CMS admin
