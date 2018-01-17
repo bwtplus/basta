@@ -126,7 +126,7 @@
 			<p class="lead main text-center">{{ .Params.subtitle }}</p>
 			{{ end }}
 			<div class="row text-center about-us">
-				{{ range where $.Pages ".Section" "=" "aboutus"}}
+				{{ range where .Pages ".Section" "=" "aboutus"}}
 				<div class="col-sm-4">
 					<div class="col-wrapper">
 						<div class="icon-wrapper">
