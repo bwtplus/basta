@@ -142,7 +142,7 @@
 			{{ range first 1 (where .Site.Pages "Type" "=" "newsSection") }} {{ if not .Draft }}
 			<p class="lead main">&nbsp;</p>
 			<h2 class="section-title text-center">{{ .Title }}</h2>
-			<div class="news-items">{{ range where .Pages ".Section" "=" "news"}} {{ .Content }} {{ end }}</div>
+			<div class="news-items">{{ range where $.Pages ".Section" "=" "news"}} {{ .Content }} {{ end }}</div>
 			{{ end }} {{ end }}
 		</div>
 		<section class="ss-style-bottom"></section>
