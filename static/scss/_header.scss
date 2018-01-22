@@ -80,8 +80,12 @@
         >li {
             display: inline-block;
             float: none;
-            width: 100px;
+			width: 82px;
+
         }
+		>li span{
+			font-weight: 700;
+		}
     }
 }
 
@@ -150,4 +154,22 @@
     position: relative;
     color: #FFF;
     padding-bottom: 32px;
+}
+
+.dropdown {
+	float: right;
+	.dropdown-menu {
+		min-width: 100px;
+		a {
+			display: block;
+			padding-left: 8px;
+		}
+	}
+}
+.dropdown-toggle {
+	color: white;
+}
+.navbar-toggle{
+	height: 34px;
+	padding: 4px 10px;
 }
