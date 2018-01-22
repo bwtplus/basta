@@ -1,8 +1,8 @@
-baseURL = "http://dobrabasta.sk/"
+baseURL = ""
 languageCode = "sk-SK"
 title = "Dobrá Bašta"
 
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "ba"
 
 [params]
 currency = "€"
@@ -12,8 +12,10 @@ currency = "€"
 weight = 1
 languageName="Bratislava"
 subtitle = "Poctivá domáca kuchyňa v Bratislave"
+
 jsonMenuUrl="https://basta-47101.firebaseio.com/meals.json?location=ba"
 jsonOfferUrl="https://basta-47101.firebaseio.com/offer.json?location=ba"
+
 facebook = "http://www.facebook.com/pages/dobrabasta"
 zomato = "https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-v"
 googleplus = "https://www.googleplus.com/basta"
@@ -24,8 +26,10 @@ googleAnalytics = "UA-123-45"
 weight = 2
 languageName="Prievidza"
 subtitle = "Poctivá domáca kuchyňa v Prievidzi"
+
 jsonMenuUrl="https://basta-47101.firebaseio.com/meals.json?location=pd"
 jsonOfferUrl="https://basta-47101.firebaseio.com/offer.json?location=pd"
+
 facebook = "http://www.facebook.com/pages/dobrabasta"
 zomato = "https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-prievidza"
 googleplus = "https://www.googleplus.com/basta"
