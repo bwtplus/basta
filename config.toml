@@ -1,16 +1,12 @@
-baseURL = ""
+baseURL = "https://dobrabasta.sk"
 languageCode = "sk-SK"
-title = "Dobrá Bašta"
-
-DefaultContentLanguage = "ba"
-
 [params]
-currency = "€"
 
 [languages]
 [languages.ba]
 weight = 1
 languageName="Bratislava"
+baseURL = ""
 subtitle = "Poctivá domáca kuchyňa v Bratislave"
 
 jsonMenuUrl="https://basta-47101.firebaseio.com/meals.json?location=ba"
@@ -25,6 +21,7 @@ googleAnalytics = "UA-123-45"
 [languages.pd]
 weight = 2
 languageName="Prievidza"
+baseURL = ""
 subtitle = "Poctivá domáca kuchyňa v Prievidzi"
 
 jsonMenuUrl="https://basta-47101.firebaseio.com/meals.json?location=pd"
