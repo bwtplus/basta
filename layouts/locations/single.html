@@ -3,11 +3,10 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"
-	lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}sk-SK{{ end }}">
+<html class="no-js" lang="sk-SK">
 <!--<![endif]-->
 <head>
-<title>{{ .Params.secionHeader.websiteTitle }} {{ .Params.Title }}</title> {{ .Hugo.Generator }}
+<title>{{ .Params.sectionHeader.websiteTitle }} {{ .Params.Title }}</title> {{ .Hugo.Generator }}
 
 <!-- meta -->
 <meta charset="utf-8">
@@ -19,18 +18,18 @@
 <link rel="stylesheet" href="/dist/bundle.css">
 
 <link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="basta"><link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}/dist/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}/dist/icons/favicon-16x16.png"><link rel="shortcut icon" href="{{.Site.BaseURL}}/dist/icons/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1536x2008.png">
-
 </head>
+
 <body data-spy="scroll" data-target="#navbar" data-offset="120">
 	<div id="menu" class="navbar navbar-inverse navbar-fixed-top"
 		role="navigation">
 		<div class="container">
 			<div class="navbar-header visible-xs">
 				<div class="dropdown navbar-toggle">
-					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prevádzky
+					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
 					</span>
 					<div class="dropdown-menu">
-						{{ range where .Site.Pages "Dir" "locations\\" }}
+						{{ range where .Site.Pages "IsPage" true}}
 						<a class="dropdown-item" href="{{ .Permalink }}">{{ .Title }}</a>
 						{{ end }}
 					</div>
@@ -42,12 +41,12 @@
 						class="icon-bar"></span>
 				</button>
 				
-				<a class="navbar-brand" href="#"><h2>{{ .Params.secionHeader.websiteTitle }}</h2></a>
+				<a class="navbar-brand" href="#"><h2>{{ .Params.sectionHeader.websiteTitle }}</h2></a>
 			</div>
 			<!-- navbar-header -->
 			<div id="navbar" class="navbar-collapse collapse">
 				<div class="hidden-xs" id="logo" class="hidden-sm-down">
-					<a href="#header"> <img src="{{.Site.BaseURL}}/img/logo.png" alt="">
+					<a href="#header"> <img src="{{$.Site.Data.settings.logo}}" alt="">
 					</a>
 				</div>
 
@@ -62,10 +61,10 @@
 					<!--fix for scroll spy active menu element-->
 					<li style="display: none;"><a href="#header"></a></li>
 					<li class="narrow-item dropdown hidden-xs">
-						<span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations }}
+						<span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
 						</span>
 						<div class="dropdown-menu">
-							{{ range where .Site.Pages "Dir" "locations\\" }}
+							{{ range where .Site.Pages "IsPage" true}}
 								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Title }}</a>
 							{{ end }}
 						</div>
@@ -83,10 +82,10 @@
 		<div class="bg-overlay"></div>
 		<div class="center text-center">
 			<div class="banner">
-				<h1 class="">{{ .Params.secionHeader.websiteTitle }}</h1>
+				<h1 class="">{{ .Params.sectionHeader.websiteTitle }}</h1>
 			</div>
 			<div class="subtitle">
-				<h4>{{ .Params.secionHeader.siteSubtitle }}</h4>
+				<h4>{{ .Params.sectionHeader.siteSubtitle }}</h4>
 			</div>
 		</div>
 		<div class="bottom text-center">
@@ -112,23 +111,23 @@
 			<p class="lead text-center drinks">{{ .Params.sectionDrinks.subtitle }}</p>
 
 			<div class="row drinks">
-				{{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				<table>
-					<tr>
-						<td>&nbsp;</td>
-						<td><div class="drink-category-title">{{ $key }}</div></td>
-						<td>&nbsp;</td>
-					</tr>
-					{{ range $taxonomy.Pages }}
-					<tr>
-						<td>{{ .Params.volume }}</td>
-						<td><span class="drink-name">{{ .Title }}</span>
-							{{ .Description}}</td>
-						<td>{{ .Params.price }} {{ $.Site.Params.currency }}</td>
-					</tr>
+					{{ range.Params.SectionDrinks.DrinkCategories }}
+						<tr>
+							<td>&nbsp;</td>
+							<td><div class="drink-category-title">{{ .title }}</div></td>
+							<td>&nbsp;</td>
+						</tr>
+						{{ range .drinks }}
+						<tr>
+							<td>{{ .volume }}</td>
+							<td><span class="drink-name">{{ .title }}</span>
+								{{ .description}}</td>
+							<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
+						</tr>
+						{{ end }}
 					{{ end }}
 				</table>
-				{{ end }}
 			</div>
 		</div>
 	</div>
@@ -184,7 +183,7 @@
 					<h3>Naše prevádzky</h3>
 					<p>
 					<ul>
-					{{ range where .Site.Pages "Dir" "locations\\" }}
+					{{ range where .Site.Pages "IsPage" true}}
 					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 					{{ end }}
 					</ul>
@@ -198,7 +197,7 @@
 		<section class="ss-style-top"></section>
 		<div class="container inner">
 			<div class="row">
-				<div class="col-sm-6">&copy; 2017 {{ .Params.secionHeader.websiteTitle }}</div>
+				<div class="col-sm-6">&copy; {{ now.Year }} {{ .Params.sectionHeader.websiteTitle }}</div>
 				<div class="col-sm-6">
 					<div class="social-bar">
 						{{ if .Params.urlSettings.facebookUrl }} <a
