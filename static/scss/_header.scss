@@ -159,13 +159,21 @@
 .dropdown {
 	float: right;
 	.dropdown-menu {
-		min-width: 100px;
+		min-width: 180px;
+		margin-top: 14px !important;
 		a {
 			display: block;
 			padding-left: 8px;
 		}
 	}
 }
+.navbar-header .dropdown {
+	float: right;
+	.dropdown-menu {
+		margin-left: -80px;
+	}
+}
+
 .dropdown-toggle {
 	color: white;
 }

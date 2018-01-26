@@ -1,5 +1,5 @@
 ---
-title: Aupark Bratislava
+title: Mlynské Nivy
 navbar:
   about: O nás
   contact: Kontakt
@@ -42,10 +42,6 @@ sectionDrinks:
           volume: 0.33 l
       title: NEALKO
     - drinks:
-        - description: '10 stupňové, tradičný ležiak'
-          price: 0.99
-          title: Kozel
-          volume: 0.5 l
         - description: Zlatý Bažant
           price: 0.99
           title: Rezané pivo
@@ -54,6 +50,10 @@ sectionDrinks:
           price: '1.50'
           title: Darebák
           volume: 0.33 l
+        - description: '10 stupňové, tradičný ležiak'
+          price: 0.99
+          title: Kozel
+          volume: 0.5 l
         - description: '14 stupňové, moc moc silné'
           price: 1.99
           title: Ochmeľená opica
@@ -61,6 +61,14 @@ sectionDrinks:
         - description: 14-stupňový špecál z Dodovaru
           price: 1.39
           title: Podstolovník
+          volume: 0.5 l
+        - description: 'Originál, nealkoholické pivo (0,49%)'
+          price: 0.99
+          title: Radegast Birell
+          volume: 0.5 l
+        - description: 'Originál, nealkoholické pivo (0,49%)'
+          price: 0.99
+          title: Radegast Birell
           volume: 0.5 l
         - description: '12 stupňové, špeciál s čerešňovým sirupom'
           price: '2.49'
@@ -70,25 +78,7 @@ sectionDrinks:
           price: '0.99'
           title: Tokajúci tetrov
           volume: 0.33 l
-        - description: 'Originál, nealkoholické pivo (0,49%)'
-          price: 0.99
-          title: Radegast Birell
-          volume: 0.5 l
-        - description: 'Originál, nealkoholické pivo (0,49%)'
-          price: 0.99
-          title: Radegast Birell
-          volume: 0.5 l
       title: PIVO
-    - drinks:
-        - description: 'Jelínek, v tégliku'
-          price: '0.99'
-          title: Borovička
-          volume: 2 dl
-        - description: 'Jelínek, v tégliku'
-          price: '0.49'
-          title: Slivôčka
-          volume: 0.2 l
-      title: Tvrdvô
   subtitle: Orosená odmena pre každého jedáka!
   title: Ponuka nápojov
 sectionAboutUs:
@@ -116,14 +106,7 @@ sectionAboutUs:
   title: O nás
 sectionnews:
   news:
-    - text: '  Milí stravníci, ďakujeme Vám za Vaše tohtoročné návštevy, veríme, že ste       si u nás pochutili! Zároveň dávame na známosť, že počas Vianočného       obdobbia, 23.12.2017 - 31.12.2017 budú naše prevádzky zatvorené z dôvodu       čerpania dovoleniek. Prajeme pekné sviatky a tešíme sa na Vás v budúcom       roku!'
-    - text: >-
-        Milí stravníci, od nového roka pre Vás rozširujeme ponuku nápojov o
-        domáce pivá od pivára Petra z Prievidze. Prémiové špeciály na
-        spríjemnenie dňa, iba u nás. Na zdravie!
-    - text: >-
-        Milí hostia, vo štvrtok 18.1. bude prevádzka z technických dôvodov
-        zatvorená.
+    - text: '  Milí stravníci, čoskoro bude pre Vás otvorená nová prevádzka Dobrej Bašty neďaleko autobusovej stanice v Bratislave - Mlynské Nivy. Tešíme sa na Vašu návštevu.'
   title: Oznamy
 sectionContacts:
   contact:
@@ -137,7 +120,7 @@ sectionContacts:
         Od 9:00 Do 21:00
       icon: fa-clock-o
       title: Otváracie hodiny
-    - content: 'Aupark, 2. poschodie, Einsteinova 18, Petržalka, Bratislava V'
+    - content: 'Twin City C, Mlynské Nivy 16, 821 09 Bratislava'
       icon: fa-map-marker
       title: Kde nás nájdete
     - content: |-
@@ -156,9 +139,9 @@ urlSettings:
   gaCode: UA-123-45
   googlePlusUrl: 'https://www.googleplus.com/basta'
   mapUrl: >-
-    https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.324470130868!2d17.10649853959983!3d48.13260031340803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c896e750cecbf%3A0xcf44c74fc7d536d!2sAupark!5e0!3m2!1ssk!2ssk!4v1511180852698
+    https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2662.1593730593586!2d17.1310265118132!3d48.14573260901364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssk!4v1516888708321
   offerMenuUrl: 'https://basta-47101.firebaseio.com/offer.json'
   zomatoUrl: >-
-    https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-v
+    https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-ii
 ---
 

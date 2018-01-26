@@ -45,7 +45,7 @@
 			</div>
 			<!-- navbar-header -->
 			<div id="navbar" class="navbar-collapse collapse">
-				<div class="hidden-xs" id="logo" class="hidden-sm-down">
+				<div id="logo" class="hidden-xs">
 					<a href="#header"> <img src="{{$.Site.Data.settings.logo}}" alt="">
 					</a>
 				</div>
@@ -180,7 +180,7 @@
 					<p>{{ .content }}</p>
 					{{ end }}
 					
-					<h3>Naše prevádzky</h3>
+					<h3>{{ $.Site.Data.settings.ourLocations }}</h3>
 					<p>
 					<ul>
 					{{ range where .Site.Pages "IsPage" true}}
@@ -197,19 +197,17 @@
 		<section class="ss-style-top"></section>
 		<div class="container inner">
 			<div class="row">
-				<div class="col-sm-6">&copy; {{ now.Year }} {{ .Params.sectionHeader.websiteTitle }}</div>
-				<div class="col-sm-6">
-					<div class="social-bar">
-						{{ if .Params.urlSettings.facebookUrl }} <a
-							href="{{ .Params.urlSettings.facebookUrl }}"
-							class="fa fa-facebook tooltipped" title="Facebook"
-							target="_blank"></a> {{ end }} {{ if .Params.urlSettings.zomatoUrl }}<a
-							href="{{ .Params.urlSettings.zomatoUrl }}" class="fa fa-spoon tooltipped"
-							title="Zomato" target="_blank"></a>{{ end }} {{ if .Params.urlSettings.googleplusUrl }}<a
-							href="{{ .Params.urlSettings.googleplusUrl }}"
-							class="fa fa-google-plus tooltipped" title="Google+"
-							target="_blank"></a>{{ end }}
-					</div>
+				<div class="copy">&copy; {{ now.Year }} {{ .Params.sectionHeader.websiteTitle }}</div>
+				<div class="social-bar">
+					{{ if .Params.urlSettings.facebookUrl }} <a
+						href="{{ .Params.urlSettings.facebookUrl }}"
+						class="fa fa-facebook tooltipped" title="Facebook"
+						target="_blank"></a> {{ end }} {{ if .Params.urlSettings.zomatoUrl }}<a
+						href="{{ .Params.urlSettings.zomatoUrl }}" class="fa fa-spoon tooltipped"
+						title="Zomato" target="_blank"></a>{{ end }} {{ if .Params.urlSettings.googleplusUrl }}<a
+						href="{{ .Params.urlSettings.googleplusUrl }}"
+						class="fa fa-google-plus tooltipped" title="Google+"
+						target="_blank"></a>{{ end }}
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 ---
-title: Aupark Bratislava
+title: Aupark Piešťany
 navbar:
   about: O nás
   contact: Kontakt
@@ -8,7 +8,7 @@ navbar:
   menu1: Menu
   news: Oznamy
 sectionHeader:
-  siteSubtitle: Poctivá domáca kuchyňa v Bratislave
+  siteSubtitle: Poctivá domáca kuchyňa v Piešťanoch
   websiteTitle: Dobrá Bašta
 sectionFoodMenu:
   subtitle: Vyberte si z našej dnešnej ponuky!
@@ -79,16 +79,6 @@ sectionDrinks:
           title: Radegast Birell
           volume: 0.5 l
       title: PIVO
-    - drinks:
-        - description: 'Jelínek, v tégliku'
-          price: '0.99'
-          title: Borovička
-          volume: 2 dl
-        - description: 'Jelínek, v tégliku'
-          price: '0.49'
-          title: Slivôčka
-          volume: 0.2 l
-      title: Tvrdvô
   subtitle: Orosená odmena pre každého jedáka!
   title: Ponuka nápojov
 sectionAboutUs:
@@ -116,13 +106,8 @@ sectionAboutUs:
   title: O nás
 sectionnews:
   news:
-    - text: '  Milí stravníci, ďakujeme Vám za Vaše tohtoročné návštevy, veríme, že ste       si u nás pochutili! Zároveň dávame na známosť, že počas Vianočného       obdobbia, 23.12.2017 - 31.12.2017 budú naše prevádzky zatvorené z dôvodu       čerpania dovoleniek. Prajeme pekné sviatky a tešíme sa na Vás v budúcom       roku!'
     - text: >-
-        Milí stravníci, od nového roka pre Vás rozširujeme ponuku nápojov o
-        domáce pivá od pivára Petra z Prievidze. Prémiové špeciály na
-        spríjemnenie dňa, iba u nás. Na zdravie!
-    - text: >-
-        Milí hostia, vo štvrtok 18.1. bude prevádzka z technických dôvodov
+        Milí hostia, vo štvrtok 15.2. bude prevádzka z technických dôvodov
         zatvorená.
   title: Oznamy
 sectionContacts:
@@ -130,14 +115,18 @@ sectionContacts:
     - content: |-
         PONDELOK - PIATOK
 
+
+
         Od 10:00 Do 21:00
 
         SOBOTA, NEDEĽA
 
+
+
         Od 9:00 Do 21:00
       icon: fa-clock-o
       title: Otváracie hodiny
-    - content: 'Aupark, 2. poschodie, Einsteinova 18, Petržalka, Bratislava V'
+    - content: 'Nitrianska 7555/18, 921 01 Piešťany'
       icon: fa-map-marker
       title: Kde nás nájdete
     - content: |-
@@ -152,13 +141,12 @@ sectionContacts:
   title: Kontakt
 urlSettings:
   facebookUrl: 'http://www.facebook.com/pages/dobrabasta'
-  foodMenuUrl: 'https://basta-47101.firebaseio.com/meals.json'
+  foodMenuUrl: 'https://basta-47101.firebaseio.com/meals.json?l=piestany'
   gaCode: UA-123-45
   googlePlusUrl: 'https://www.googleplus.com/basta'
   mapUrl: >-
-    https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.324470130868!2d17.10649853959983!3d48.13260031340803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c896e750cecbf%3A0xcf44c74fc7d536d!2sAupark!5e0!3m2!1ssk!2ssk!4v1511180852698
-  offerMenuUrl: 'https://basta-47101.firebaseio.com/offer.json'
-  zomatoUrl: >-
-    https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-v
+    https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10556.46979469098!2d17.832927!3d48.58845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x234b83b0246c5a2c!2zQXVwYXJrIFBpZcWhxaVhbnk!5e0!3m2!1ssk!2ssk!4v1516880429580
+  offerMenuUrl: 'https://basta-47101.firebaseio.com/offer.json?l=piestany'
+  zomatoUrl: 'https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-piestany'
 ---
 

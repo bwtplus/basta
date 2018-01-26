@@ -3,6 +3,7 @@ backend:
   repo: beweteplus/basta
 
 media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "settings"
@@ -17,10 +18,10 @@ collections:
         file: "data/settings.json"
         description: "Všeobecné nastavenia webstránky"
         fields:
-          - {label: "Locale", name: "locale", widget: "string"}
+          - {label: "Značka / Názov siete prevádzok", name: "title", widget: "string"}        
+          - {label: "Naše prevádzky", name: "ourLocations", widget: "string"}        
           - {label: "Mena", name: "currency", widget: "string"}
-          - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Copyright Info", name: "copyright", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "string"}
   - name: "locations" # all the things in one entry, for documentation and quick testing
     label: "Prevádzky"
     folder: "content/locations"
@@ -36,9 +37,9 @@ collections:
           - {label: "O nás", name: "about", widget: "string"}
           - {label: "Oznamy", name: "news", widget: "string"}
           - {label: "Kontakt", name: "contact", widget: "string"}
-          - {label: "Prevádzky", name: "locations", widget: "string"}
+          - {label: "Prevádzky", name: "locations1", widget: "string"}
       - label: "Titulka"
-        name: "secionHeader"
+        name: "sectionHeader"
         widget: "object"
         fields:      
           - {label: "Názov stránky", name: "websiteTitle", widget: "string"}
@@ -46,25 +47,30 @@ collections:
       - label: "Sekcia Denné menu"
         name: "sectionFoodMenu"
         widget: "object"
-        fields:      
+        fields:
           - {label: "Nadpis", name: "title", widget: "string"}
           - {label: "Podnadpis", name: "subtitle", widget: "string"}
       - label: "Sekcia nápoje"
         name: "sectionDrinks"
         widget: "object"
-        fields:      
+        fields:
           - {label: "Nadpis", name: "title", widget: "string"}
           - {label: "Podnadpis", name: "subtitle", widget: "string"}
-          - label: "Nápoje"
-            name: "drinks"
+          - label: "Kategórie nápojov"
+            name: "drinkCategories"
             widget: "list"
             required: false
             fields:
-              - {label: "Názov", name: "title", widget: "string"}
-              - {label: "Popis", name: "description", widget: "string"}
-              - {label: "Objem", name: "volume", widget: "string"}
-              - {label: "Cena", name: "price", widget: "string"}
-              - {label: "Kategória", name: "type", widget: "select", options: ["Nealko", "Pivo", "Víno"]}
+              - {label: "Názov kategórie", name: "title", widget: "string"}
+              - label: "Nápoje"
+                name: "drinks"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Názov", name: "title", widget: "string"}
+                  - {label: "Popis", name: "description", widget: "string"}
+                  - {label: "Objem", name: "volume", widget: "string"}
+                  - {label: "Cena", name: "price", widget: "string"}
       - label: "Sekcia O nás"
         name: "sectionAboutUs"
         widget: "object"
