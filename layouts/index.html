@@ -14,6 +14,11 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
+{{ if eq (len (where .Site.Pages "IsPage" true)) 1 }}
+	{{ range where .Site.Pages "IsPage" true}}
+	<meta http-equiv="refresh" content="0; url={{ .Permalink }}" />
+	{{ end }}
+{{ end }}
 <!-- css -->
 <link rel="stylesheet" href="/dist/bundle.css">
 
@@ -38,7 +43,7 @@
 		<div class="bg-overlay"></div>
 		<div class="center text-center">
 			<div class="banner">
-				<h1 class="">Dobrá Bašta</h1>
+				<h1 class="">{{$.Site.Data.settings.title }}</h1>
 			</div>
 			<div class="subtitle">
 				{{ range where .Site.Pages "IsPage" true}}
