@@ -152,7 +152,7 @@
 							<i class="fa {{ .icon }}"></i>
 						</div>
 						<h3>{{ .title }}</h3>
-						{{ .content }}
+						{{ .content | markdownify }}
 					</div>
 				</div>
 				{{ end }}
@@ -160,7 +160,7 @@
 
 			<p id="news" class="lead main">&nbsp;</p>
 			<h2 class="section-title text-center">{{ .Params.sectionnews.Title }}</h2>
-			<div class="news-items">{{ range .Params.SectionNews.news}}<p>{{ .text }}</p>{{ end }}</div>
+			<div class="news-items">{{ range .Params.SectionNews.news }}<p>{{ .text | markdownify }}</p>{{ end }}</div>
 			
 		</div>
 		<section class="ss-style-bottom"></section>
@@ -182,7 +182,7 @@
 					<h3>
 						<i class="fa {{ .icon }} fa-fw"></i>{{ .title }}
 					</h3>
-					<p>{{ .content }}</p>
+					<p>{{ .content | markdownify }}</p>
 					{{ end }}
 					<div class="hideIfSingleLocation">
 						<h3>{{ $.Site.Data.settings.ourLocations }}</h3>
