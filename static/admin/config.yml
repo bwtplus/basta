@@ -24,7 +24,7 @@ collections:
           - {label: "Logo", name: "logo", widget: "string"}
   - name: "locations" # all the things in one entry, for documentation and quick testing
     label: "Prevádzky"
-    folder: "content/locations"
+    folder: "content/prevadzky"
     create: true
     fields:
       - {label: "Názov prevádzky", name: "title", widget: "string"}
