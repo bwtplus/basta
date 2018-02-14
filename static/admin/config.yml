@@ -2,56 +2,120 @@ backend:
   name: github
   repo: beweteplus/basta
 
-media_folder: "static/data/img"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
-  - name: drinks
-    label: "Nápoje"
-    folder: "content/drinks"
+  - name: "settings"
+    label: "Nastavenia"
+    delete: false
     create: true
-    fields: 
-      - {label: "Názov", name: "title", widget: "text"}
-      - {label: "Popis", name: "description", widget: "text"}
-      - {label: "Kategórie", name: "categories", widget: "list", default: ["Nealko","Pivo"]}
-      - {label: "Cena", name: "price", widget: "text", default: "0,99"}
-      - {label: "Objem", name: "volume", widget: "text", default: "0,5 l"}
-      
-  - name: news
-    label: "Oznamy"
-    folder: "content/news"
+    editor:
+      preview: false
+    files:
+      - name: "general-settings"
+        label: "Všeobecné nastavenia"
+        file: "data/settings.json"
+        description: "Všeobecné nastavenia webstránky"
+        fields:
+          - {label: "Značka / Názov siete prevádzok", name: "title", widget: "string"}        
+          - {label: "Naše prevádzky", name: "ourLocations", widget: "string"}        
+          - {label: "Mena", name: "currency", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "string"}
+  - name: "locations" # all the things in one entry, for documentation and quick testing
+    label: "Prevádzky"
+    folder: "content/prevadzky"
     create: true
-    fields: 
-      - {label: "Hidden", name: "title", widget: "hidden", default: "hidden"}
-      - {label: "Poradie", name: "weight", widget: "list", default: ["1","2","3","4","5","6","7","8","9"]}
-      - {label: "Text oznamu", name: "content", widget: "text"}
-      
-  - name: contact
-    label: "Kontakt"
-    folder: "content/contact"
-    create: false
-    fields: 
-      - {label: "Poradie", name: "weight", widget: "list", default: ["1","2","3"]}
-      - {label: "Nadpis", name: "title", widget: "text"}
-      - {label: "Ikona", name: "description", widget: "list", default: ["fa-clock-o","fa-map-marker","fa-mobile"]}
-      - {label: "Text sem", name: "content", widget: "text"}
-
-  - name: aboutus
-    label: "O nás"
-    folder: "content/aboutus"
-    create: false
-    fields: 
-      - {label: "Poradie", name: "weight", widget: "list", default: ["1","2","3"]}
-      - {label: "Nadpis", name: "title", widget: "text"}
-      - {label: "Ikona", name: "description", widget: "list", default: ["fa-anchor","fa-cutlery","fa-coffee"]}
-      - {label: "Text sem", name: "content", widget: "text"}
-
-  - name: sections
-    label: "Sekcie"
-    folder: "content"
-    create: false
-    fields: 
-      - {label: "Nadpis", name: "title", widget: "text"}
-      - {label: "Podnadpis", name: "subtitle", widget: "text"}
-      - {label: "Typ", name: "type", widget: "list", default: ["menuSection", "drinksSection", "about-us", "contactSection"]}
-      - {label: "Mapa", name: "map", widget: "text", default: "www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.324470130868!2d17.10649853959983!3d48.13260031340803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c896e750cecbf%3A0xcf44c74fc7d536d!2sAupark!5e0!3m2!1ssk!2ssk!4v1511180852698"}
-  
+    fields:
+      - {label: "Názov prevádzky", name: "title", widget: "string"}
+      - label: "Horné menu"
+        name: "navbar"
+        widget: "object"
+        fields:      
+          - {label: "Denné menu", name: "menu1", widget: "string"}
+          - {label: "Nápoje", name: "drinks", widget: "string"}
+          - {label: "O nás", name: "about", widget: "string"}
+          - {label: "Oznamy", name: "news", widget: "string"}
+          - {label: "Kontakt", name: "contact", widget: "string"}
+          - {label: "Prevádzky", name: "locations1", widget: "string"}
+      - label: "Titulka"
+        name: "sectionHeader"
+        widget: "object"
+        fields:      
+          - {label: "Názov stránky", name: "websiteTitle", widget: "string"}
+          - {label: "Podtitulok stránky", name: "siteSubtitle", widget: "string"}
+      - label: "Sekcia Denné menu"
+        name: "sectionFoodMenu"
+        widget: "object"
+        fields:
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - {label: "Podnadpis", name: "subtitle", widget: "string"}
+      - label: "Sekcia nápoje"
+        name: "sectionDrinks"
+        widget: "object"
+        fields:
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - {label: "Podnadpis", name: "subtitle", widget: "string"}
+          - label: "Kategórie nápojov"
+            name: "drinkCategories"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Názov kategórie", name: "title", widget: "string"}
+              - label: "Nápoje"
+                name: "drinks"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Názov", name: "title", widget: "string"}
+                  - {label: "Popis", name: "description", widget: "string"}
+                  - {label: "Objem", name: "volume", widget: "string"}
+                  - {label: "Cena", name: "price", widget: "string"}
+      - label: "Sekcia O nás"
+        name: "sectionAboutUs"
+        widget: "object"
+        fields:
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - {label: "Podnadpis", name: "subtitle", widget: "string"}
+          - label: "O nás"
+            name: "aboutUs"
+            widget: "list"
+            fields:
+              - {label: "Nadpis", name: "title", widget: "string"}
+              - {label: "Ikona", name: "icon", widget: "string"}
+              - {label: "Text", name: "content", widget: "markdown"}
+      - label: "Sekcia Oznamy"
+        name: "sectionnews"
+        widget: "object"
+        fields:
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - label: "Oznamy"
+            name: "news"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "text oznamu", name: "text", widget: "string"}
+      - label: "Sekcia Kontakty"
+        name: "sectionContacts"
+        widget: "object"
+        fields:
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - {label: "Podnadpis", name: "subtitle", widget: "string"}
+          - label: "Kontakt"
+            name: "contact"
+            widget: "list"
+            fields:
+              - {label: "Nadpis", name: "title", widget: "string"}
+              - {label: "Ikona", name: "icon", widget: "string"}         
+              - {label: "Text", name: "content", widget: "markdown"}
+      - label: "Nastavenia linkov"
+        name: "urlSettings"
+        widget: "object"
+        fields:
+          - {label: "URL pre jedlá", name: "foodMenuUrl", widget: "string"}
+          - {label: "URL pre ponuku", name: "offerMenuUrl", widget: "string"}
+          - {label: "URL google mapy", name: "mapUrl", widget: "string"}
+          - {label: "google analytics kód", name: "gaCode", widget: "string"}
+          - {label: "Facebook page URL", name: "facebookUrl", widget: "string"}
+          - {label: "Google+ page URL", name: "googlePlusUrl", widget: "string"}
+          - {label: "Zomato page URL", name: "zomatoUrl", widget: "string"}

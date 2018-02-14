@@ -58,10 +58,10 @@
     margin-bottom: 0;
 }
 
-.navbar-brand {
-    padding-top: 8px;
-    padding-bottom: 0;
+a.navbar-brand {
+	padding: 8px 0 14px 15px !important;
     h2 {
+		font-size: 26px !important;
         margin-top: 0;
         font-weight: bold;
         color: $font-color-light;
@@ -80,8 +80,12 @@
         >li {
             display: inline-block;
             float: none;
-            width: 100px;
+			width: 82px;
+
         }
+		>li span{
+			font-weight: 700;
+		}
     }
 }
 
@@ -150,4 +154,30 @@
     position: relative;
     color: #FFF;
     padding-bottom: 32px;
+}
+
+.dropdown {
+	float: right;
+	.dropdown-menu {
+		min-width: 180px;
+		margin-top: 14px !important;
+		a {
+			display: block;
+			padding-left: 8px;
+		}
+	}
+}
+.navbar-header .dropdown {
+	float: right;
+	.dropdown-menu {
+		margin-left: -80px;
+	}
+}
+
+.dropdown-toggle {
+	color: white;
+}
+.navbar-toggle{
+	height: 34px;
+	padding: 4px 10px;
 }

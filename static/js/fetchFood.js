@@ -7,9 +7,8 @@ function addGallery() {
 	});
 }
 
-// TODO: make editable from CMS
-const offerUrl = "https://basta-47101.firebaseio.com/offer.json"
-const mealsUrl = "https://basta-47101.firebaseio.com/meals.json"
+const offerUrl = jsonOfferUrl;
+const mealsUrl = jsonMenuUrl;
 
 function fetchJson(url) {
 	return new Promise(function(resolve, reject) {
