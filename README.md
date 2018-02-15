@@ -1,40 +1,37 @@
 # Basta Web
 
+## Basta web on local
 
-## Local Git repository
-http://gitlab.bwt/basta/basta-web.git
+### Local Git repository
+	http://gitlab.bwt/basta/basta-web.git
 
-
-## Basta web on local machine
-
-### first run install
+### CLI webpack
+    //first run install
 	> npm install
-### webpack dev build
+    //webpack build - only static assets
 	> npm run build
-### webpack prod build
 	> npm run prod
-	- uses faviconsWebpackPlugin - generates favicons
-	- uses UglifyJsPlugin - generates sourcemap, minimises js
-	- uses image-webpack-loader - compresses images
-	
-### webpack dev build on changes
 	> npm run watch
-### start dev server
+### CLI hugo
+    //start dev server
 	> hugo server
-### simple build site
+    //simple build site
 	> hugo
-	
 
-## Basta on NETLIFY
+## Basta web on NETLIFY
 
-### frontend
+### Web Page
 	https://basta.netlify.com
+
+### Git Repositar
+	https://github.com/beweteplus/basta
+	login cez github:	beweteplus / beweteplus1
  
 ### CMS admin section
 	http://basta.netlify.com/admin/
 	login cez github:	beweteplus / beweteplus1
 
-### netlify settings
+### Netlify settings
 	https://app.netlify.com/sites/basta/overview
 	login cez github:	beweteplus@gmail.com / beweteplus1
 
