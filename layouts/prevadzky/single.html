@@ -30,14 +30,14 @@
 		role="navigation">
 		<div class="container">
 			<div class="navbar-header visible-xs hideIfSingleLocation">
-				<div class="dropdown navbar-toggle">
+				<div class="dropdown navbar-toggle narrow-item">
 					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
 					</span>
-					<div class="dropdown-menu">
+					<ul class="dropdown-menu">
 						{{ range where .Site.Pages "IsPage" true}}
-						<a class="dropdown-item" href="{{ .Permalink }}">{{ .Title }}</a>
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 						{{ end }}
-					</div>
+					</ul>
 				</div>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-collapse">
@@ -66,13 +66,12 @@
 					<!--fix for scroll spy active menu element-->
 					<li style="display: none;"><a href="#header"></a></li>
 					<li class="narrow-item dropdown hidden-xs hideIfSingleLocation">
-						<span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
-						</span>
-						<div class="dropdown-menu">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ .Params.navbar.locations1 }}</a>
+						<ul class="dropdown-menu">
 							{{ range where .Site.Pages "IsPage" true}}
-								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Title }}</a>
+								<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 							{{ end }}
-						</div>
+						</ul>
 					</li>
 				</ul>
 			</div>

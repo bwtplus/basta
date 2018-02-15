@@ -89,6 +89,11 @@ a.navbar-brand {
     }
 }
 
+.nav > li > a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .navbar-inverse {
     .navbar-nav {
         >li>a {
@@ -160,7 +165,6 @@ a.navbar-brand {
 	float: right;
 	.dropdown-menu {
 		min-width: 180px;
-		margin-top: 14px !important;
 		a {
 			display: block;
 			padding-left: 8px;
@@ -180,4 +184,16 @@ a.navbar-brand {
 .navbar-toggle{
 	height: 34px;
 	padding: 4px 10px;
+}
+
+.narrow-item {
+	cursor: pointer;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

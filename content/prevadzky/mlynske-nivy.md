@@ -124,11 +124,11 @@ sectionContacts:
       icon: fa-map-marker
       title: Kde nás nájdete
     - content: |-
-        E-mail: info@dobrabasta.sk
+        E-mail: <a href="mailto:info@dobrabasta.sk">info@dobrabasta.sk</a>
 
 
 
-        Telefón: +421 948838100
+        Telefón: <a href="tel:+421948838100">+421 948838100</a>
       icon: fa-mobile
       title: Kontakt
   subtitle: 'Nájdete nás veľmi ľahko, vrátite sa vždy zakrátko.'

@@ -1,45 +1,39 @@
 # Basta Web
 
-## Basta web on local machine
+## Basta web on local
 
-### webpack dev build
+### Local Git repository
+	http://gitlab.bwt/basta/basta-web.git
+
+### CLI webpack
+    //first run install
+	> npm install
+    //webpack build - only static assets
 	> npm run build
-### webpack prod build
 	> npm run prod
-### webpack dev build on changes
 	> npm run watch
-### start dev server
+### CLI hugo
+    //start dev server
 	> hugo server
-### simple build site
+    //simple build site
 	> hugo
 
+## Basta web on NETLIFY
 
-## Basta on FORESTRY
-
-### frontend
-	https://dobrabasta.bitbucket.io/
-
-### admin section
-	CMS admin
-		https://app.forestry.io/dashboard
-	login cez Bitbucket: bwtplus@gmail.com / bitBWT9445
-
-
-
-## Basta on NETLIFY
-
-### frontend
+### Web Page
 	https://basta.netlify.com
+
+### Git Repositar
+	https://github.com/beweteplus/basta
+	login cez github:	beweteplus / beweteplus1
  
-### admin section
-	netlify settings
-		https://app.netlify.com/sites/basta/overview
-	CMS admin
-		http://basta.netlify.com/admin/
+### CMS admin section
+	http://basta.netlify.com/admin/
 	login cez github:	beweteplus / beweteplus1
 
-	
+### Netlify settings
+	https://app.netlify.com/sites/basta/overview
+	login cez github:	beweteplus@gmail.com / beweteplus1
 
 ## Theme
-https://themewagon.com/themes/bootstrap-powered-restaurant-website-template-meatking-pro/
-	
+	https://themewagon.com/themes/bootstrap-powered-restaurant-website-template-meatking-pro/
