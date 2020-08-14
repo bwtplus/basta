@@ -35,7 +35,7 @@ function fillTemplate(meal) {
 					<h3>${meal.name}</h3>
 					<p>${meal.description || ""}</p>
 				</div>
-				<span class="hot-tag br-red">${price}</span>
+				<span class="hot-tag br-red">${price}€</span>
 				<div class="clearfix"></div>
 			</div>
 		</div>`;
