@@ -45,14 +45,14 @@ function updateFoodMenu(offers, meals) {
 	Object.values(offers).forEach(offer => {
 		const offerName = offer.conf.name
 		const offerMeals = Object.entries(offer.data.mealIds)
-							.map(([mealId, order])=> ({
-								imageUrl: meals[mealId].imageUrl,
-								name: meals[mealId].name,
-								description: meals[mealId].description,
-								price: meals[mealId].price,
-								order
-							}))
-							.sort((a,b) => a.order > b.order)
+			.map(([mealId, order])=> ({
+				imageUrl: meals[mealId].imageUrl,
+				name: meals[mealId].name,
+				description: meals[mealId].description,
+				price: meals[mealId].price,
+				order
+			}))
+			.sort((a,b) => a.order > b.order)
 		const foodMenuContent = offerMeals.reduce((acc, val, id) => {
 			acc += fillTemplate(val);
 			if (id % 2 === 1) {
