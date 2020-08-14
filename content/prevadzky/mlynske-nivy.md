@@ -135,12 +135,12 @@ sectionContacts:
   title: Kontakt
 urlSettings:
   facebookUrl: 'http://www.facebook.com/pages/dobrabasta'
-  foodMenuUrl: 'https://basta-47101.firebaseio.com/meals.json'
+  foodMenuUrl: 'https://basta-e2518.firebaseio.com/projects/-L2ylgkznZdhmlz1ptV9/data/meals.json'
   gaCode: UA-123-45
   googlePlusUrl: 'https://www.googleplus.com/basta'
   mapUrl: >-
     https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2662.1593730593586!2d17.1310265118132!3d48.14573260901364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssk!4v1516888708321
-  offerMenuUrl: 'https://basta-47101.firebaseio.com/offer.json'
+  offerMenuUrl: 'https://basta-e2518.firebaseio.com/projects/-L2ylgkznZdhmlz1ptV9/data/offer.json'
   zomatoUrl: >-
     https://www.zomato.com/bratislava/dobr%C3%A1-ba%C5%A1ta-petr%C5%BEalka-bratislava-ii
 ---
