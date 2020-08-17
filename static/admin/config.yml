@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: beweteplus/basta
+  repo: bwtplus/basta
 
 media_folder: "static/img"
 public_folder: "/img"
