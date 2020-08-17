@@ -2,9 +2,6 @@
 
 ## Basta web on local
 
-### Local Git repository
-	http://gitlab.bwt/basta/basta-web.git
-
 ### CLI webpack
     //first run install
 	> npm install
@@ -20,20 +17,11 @@
 
 ## Basta web on NETLIFY
 
-### Web Page
-	https://basta.netlify.com
-
-### Git Repositar
-	https://github.com/beweteplus/basta
-	login cez github:	beweteplus / beweteplus1
- 
-### CMS admin section
-	http://basta.netlify.com/admin/
-	login cez github:	beweteplus / beweteplus1
-
-### Netlify settings
-	https://app.netlify.com/sites/basta/overview
-	login cez github:	beweteplus@gmail.com / beweteplus1
+- https://dobrabasta.netlify.com
+- https://dobrabasta.netlify.com/admin/
+- https://github.com/bwtplus/basta
+- https://app.netlify.com/sites/dobrabasta/overview
+- see wiki for access and credentials
 
 ## Theme
 	https://themewagon.com/themes/bootstrap-powered-restaurant-website-template-meatking-pro/
