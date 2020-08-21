@@ -135,6 +135,8 @@ sectionContacts:
         SOBOTA, NEDEĽA
 
         Od 9:00 Do 21:00
+
+        24.12. - 2.1. ZATVORENE
       icon: fa-clock-o
       title: Otváracie hodiny
     - content: 'Aupark, 2. poschodie, Einsteinova 18, Petržalka, Bratislava V'
