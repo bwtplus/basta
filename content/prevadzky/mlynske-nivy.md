@@ -1,5 +1,5 @@
 ---
-title: Mlynské Nivy
+title: Kantína Mlynské Nivy
 navbar:
   about: O nás
   contact: Kontakt
