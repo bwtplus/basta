@@ -77,7 +77,6 @@
 					<li class="wide-item"><a href="#food-menu">{{ .Params.navbar.menu1 }}</a></li>
 					<li class="narrow-item"><a href="#about-us">{{ .Params.navbar.about}}</a></li>
 					<li class="logoSpacing"></li>
-					<li class="narrow-item"><a href="#news">{{ .Params.navbar.news}}</a></li>
 					<li class="narrow-item"><a href="#contact">{{ .Params.navbar.contact}}</a></li>
 
 					<!--fix for scroll spy active menu element-->
@@ -122,8 +121,7 @@
 		<section class="ss-style-bottom"></section>
 	</div>
 
-	<div id="about-us" class="light-wrapper">
-		<section class="ss-style-top"></section>
+	<div id="about-us" class="parallax">
 		<div class="container inner">
 			<h2 class="section-title text-center">{{ .Params.sectionAboutUs.Title }}</h2>
 			<p class="lead main text-center">{{ .Params.sectionAboutUs.subtitle }}</p>
@@ -141,16 +139,15 @@
 				</div>
 				{{ end }}
 			</div>
+			<br/>
+			<br/>
 
-			<p id="news" class="lead main">&nbsp;</p>
 			<h2 class="section-title text-center">{{ .Params.sectionnews.Title }}</h2>
 			<div class="news-items">{{ range .Params.SectionNews.news }}<p>{{ .text | markdownify }}</p>{{ end }}</div>
-			
 		</div>
-		<section class="ss-style-bottom"></section>
 	</div>
 
-	<div id="contact" class="parallax">
+	<div id="contact" class="wrapper">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
 			<h2 class="section-title text-center">{{ .Params.SectionContacts.Title }}</h2>
