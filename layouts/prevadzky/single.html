@@ -6,44 +6,63 @@
 <html class="no-js" lang="sk-SK">
 <!--<![endif]-->
 <head>
-<title>{{ .Params.sectionHeader.websiteTitle }} {{ .Params.Title }}</title> {{ .Hugo.Generator }}
+	<title>{{ .Params.sectionHeader.websiteTitle }} {{ .Params.Title }}</title> {{ .Hugo.Generator }}
 
-<!-- meta -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-<!-- css -->
-<link rel="stylesheet" href="/dist/bundle.css">
-{{ if eq (len (where .Site.Pages "IsPage" true)) 1 }}
-<style>
-.hideIfSingleLocation {visibility:hidden;}
-</style>
-{{ end }}
-		
-<link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="basta"><link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}/dist/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}/dist/icons/favicon-16x16.png"><link rel="shortcut icon" href="{{.Site.BaseURL}}/dist/icons/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1536x2008.png">
+	<link rel="stylesheet" href="/dist/bundle.css">
+	{{ if eq (len (where .Site.Pages "IsPage" true)) 1 }}
+		<style>
+		.hideIfSingleLocation {visibility:hidden;}
+		</style>
+	{{ end }}
+			
+	<link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-180x180.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="basta">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}/dist/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}/dist/icons/favicon-16x16.png">
+	<link rel="shortcut icon" href="{{.Site.BaseURL}}/dist/icons/favicon.ico">
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-320x460.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x920.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x1096.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-750x1294.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1182x2208.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1242x2148.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-748x1024.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-768x1004.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1496x2048.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1536x2008.png">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="120">
-	<div id="menu" class="navbar navbar-inverse navbar-fixed-top"
-		role="navigation">
+	<div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header visible-xs hideIfSingleLocation">
 				<div class="dropdown navbar-toggle narrow-item">
-					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
-					</span>
+					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}</span>
 					<ul class="dropdown-menu">
 						{{ range where .Site.Pages "IsPage" true}}
 							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 						{{ end }}
 					</ul>
 				</div>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				
 				<a class="navbar-brand" href="#"><h2>{{ .Params.sectionHeader.websiteTitle }}</h2></a>
@@ -51,8 +70,7 @@
 			<!-- navbar-header -->
 			<div id="navbar" class="navbar-collapse collapse">
 				<div id="logo" class="hidden-xs">
-					<a href="#header"> <img src="{{$.Site.Data.settings.logo}}" alt="">
-					</a>
+					<a href="#header"> <img src="{{$.Site.Data.settings.logo}}" alt="" />
 				</div>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -93,8 +111,9 @@
 			</div>
 		</div>
 		<div class="bottom text-center">
-			<a id="scrollDownArrow" href="#food-menu"><i
-				class="fa fa-chevron-down jump"></i></a>
+			<a id="scrollDownArrow" href="#food-menu">
+				<i class="fa fa-chevron-down jump"></i>
+			</a>
 		</div>
 	</div>
 	<!-- /#header -->
@@ -123,12 +142,11 @@
 							<td>&nbsp;</td>
 						</tr>
 						{{ range .drinks }}
-						<tr>
-							<td>{{ .volume }}</td>
-							<td><span class="drink-name">{{ .title }}</span>
-								{{ .description}}</td>
-							<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
-						</tr>
+							<tr>
+								<td>{{ .volume }}</td>
+								<td><span class="drink-name">{{ .title }}</span>{{ .description}}</td>
+								<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
+							</tr>
 						{{ end }}
 					{{ end }}
 				</table>
@@ -173,8 +191,7 @@
 			<p class="lead contact main text-center contacts">{{ .Params.SectionContacts.subtitle }}</p>
 			<div class="row">
 				<div class="col-md-8">
-					<iframe src="{{ .Params.urlSettings.mapUrl }}" width="600" height="450"
-						frameborder="0" style="border: 0" allowfullscreen></iframe>
+					<iframe src="{{ .Params.urlSettings.mapUrl }}" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-4">
 					{{ range .Params.SectionContacts.contact}}
@@ -186,11 +203,11 @@
 					<div class="hideIfSingleLocation">
 						<h3>{{ $.Site.Data.settings.ourLocations }}</h3>
 						<p>
-						<ul>
-						{{ range where .Site.Pages "IsPage" true}}
-						<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-						{{ end }}
-						</ul>
+							<ul>
+							{{ range where .Site.Pages "IsPage" true}}
+								<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+							{{ end }}
+							</ul>	
 						</p>
 					</div>
 				</div>
@@ -204,15 +221,15 @@
 			<div class="row">
 				<div class="copy">&copy; {{ now.Year }} {{ .Params.sectionHeader.websiteTitle }}</div>
 				<div class="social-bar">
-					{{ if .Params.urlSettings.facebookUrl }} <a
-						href="{{ .Params.urlSettings.facebookUrl }}"
-						class="fa fa-facebook tooltipped" title="Facebook"
-						target="_blank"></a> {{ end }} {{ if .Params.urlSettings.zomatoUrl }}<a
-						href="{{ .Params.urlSettings.zomatoUrl }}" class="fa fa-spoon tooltipped"
-						title="Zomato" target="_blank"></a>{{ end }} {{ if .Params.urlSettings.googleplusUrl }}<a
-						href="{{ .Params.urlSettings.googleplusUrl }}"
-						class="fa fa-google-plus tooltipped" title="Google+"
-						target="_blank"></a>{{ end }}
+					{{ if .Params.urlSettings.facebookUrl }}
+						<a href="{{ .Params.urlSettings.facebookUrl }}" class="fa fa-facebook tooltipped" title="Facebook" target="_blank"></a>
+					{{ end }}
+					{{ if .Params.urlSettings.zomatoUrl }}
+						<a href="{{ .Params.urlSettings.zomatoUrl }}" class="fa fa-spoon tooltipped" title="Zomato" target="_blank"></a>
+					{{ end }}
+					{{ if .Params.urlSettings.googleplusUrl }}
+						<a href="{{ .Params.urlSettings.googleplusUrl }}" class="fa fa-google-plus tooltipped" title="Google+" target="_blank"></a>
+					{{ end }}
 				</div>
 			</div>
 		</div>
