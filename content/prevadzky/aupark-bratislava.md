@@ -3,7 +3,6 @@ title: Aupark Bratislava
 navbar:
   about: O nás
   contact: Kontakt
-  drinks: Nápoje
   locations1: Prevádzky
   menu1: Menu
   news: Oznamy
@@ -12,7 +11,7 @@ sectionHeader:
   websiteTitle: Dobrá Bašta
 sectionFoodMenu:
   subtitle: Vyberte si z našej dnešnej ponuky!
-  title: Denné menu
+  title: Menu
 sectionAboutUs:
   aboutUs:
     - content: >-
@@ -63,9 +62,9 @@ sectionContacts:
       icon: fa-map-marker
       title: Kde nás nájdete
     - content: |-
-        E-mail: info@dobrabasta.sk
+        E-mail: <a href="mailto:info@dobrabasta.sk">info@dobrabasta.sk</a>
 
-        Telefón: +421 948 838 100
+        Telefón: <a href="tel:+421948838100">+421 948 838 100</a>
       icon: fa-mobile
       title: Kontakt
   subtitle: 'Nájdete nás veľmi ľahko, vrátite sa vždy zakrátko.'

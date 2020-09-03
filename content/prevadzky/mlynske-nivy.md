@@ -3,7 +3,6 @@ title: Kantína Mlynské Nivy
 navbar:
   about: O nás
   contact: Kontakt
-  drinks: Nápoje
   locations1: Prevádzky
   menu1: Menu
   news: Oznamy
@@ -12,7 +11,7 @@ sectionHeader:
   websiteTitle: Dobrá Bašta
 sectionFoodMenu:
   subtitle: Vyberte si z našej dnešnej ponuky!
-  title: Denné menu
+  title: Menu
 sectionAboutUs:
   aboutUs:
     - content: >-
@@ -58,9 +57,7 @@ sectionContacts:
     - content: |-
         E-mail: <a href="mailto:info@dobrabasta.sk">info@dobrabasta.sk</a>
 
-
-
-        Telefón: <a href="tel:+421948838100">+421 948838100</a>
+        Telefón: <a href="tel:+421948838100">+421 948 838 100</a>
       icon: fa-mobile
       title: Kontakt
   subtitle: 'Nájdete nás veľmi ľahko, vrátite sa vždy zakrátko.'
