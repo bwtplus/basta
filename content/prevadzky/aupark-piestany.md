@@ -5,7 +5,6 @@ navbar:
   contact: Kontakt
   locations1: Prevádzky
   menu1: Menu
-  news: Oznamy
 sectionHeader:
   siteSubtitle: Poctivá domáca kuchyňa v Piešťanoch
   websiteTitle: Dobrá Bašta
