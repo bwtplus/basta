@@ -7,9 +7,6 @@ function addGallery() {
 	});
 }
 
-const offerUrl = jsonOfferUrl;
-const mealsUrl = jsonMenuUrl;
-
 const formatter = new Intl.NumberFormat('sk-SK', {minimumFractionDigits: 2});
 
 function fetchJson(url) {
@@ -24,7 +21,7 @@ function fetchJson(url) {
 	});
 }
 
-function fillTemplate(meal) {
+function createMealElement(meal, currency) {
 	var price = formatter.format(meal.price);
 	return `
 		<div class="col-md-6 col-sm-6">
@@ -35,13 +32,13 @@ function fillTemplate(meal) {
 					<h3>${meal.name}</h3>
 					<p>${meal.description || ""}</p>
 				</div>
-				<span class="hot-tag br-red">${price}€</span>
+				<span class="hot-tag br-red">${price} ${currency}</span>
 				<div class="clearfix"></div>
 			</div>
 		</div>`;
 }
 
-function updateFoodMenu(offers, meals) {
+function updateFoodMenu(meals, offers, currency) {
 	Object.values(offers).forEach(offer => {
 		const offerName = offer.conf.name
 		const offerMeals = Object.entries(offer.data.mealIds)
@@ -53,22 +50,22 @@ function updateFoodMenu(offers, meals) {
 				order
 			}))
 			.sort((a,b) => a.order > b.order)
-		const foodMenuContent = offerMeals.reduce((acc, val, id) => {
-			acc += fillTemplate(val);
+		const offerMealElements = offerMeals.reduce((acc, meal, id) => {
+			acc += createMealElement(meal, currency);
 			if (id % 2 === 1) {
 				acc += '<div class="clearfix"></div>';
 			}
 			return acc;
 		}, '');
 		$("#upadatedMenu").append(`<h2 class="row section-title text-center">${offerName}</h2>`);
-		$("#upadatedMenu").append(foodMenuContent);
+		$("#upadatedMenu").append(offerMealElements);
 		$("#upadatedMenu").append(`<div class="clearfix"></div>`);
 	});
 	addGallery();
 }
 
 export function initFoodMenu() {
-	Promise.all([fetchJson(offerUrl), fetchJson(mealsUrl)])
-	.then(([offers, meals]) => updateFoodMenu(offers, meals))
-	.catch(error => console.log("Error getting menu", error));
+	Promise.all([fetchJson(mealsUrl), fetchJson(offersUrl), fetchJson(currencyUrl)])
+		.then(([meals, offers, currency]) => updateFoodMenu(meals, offers, currency))
+		.catch(error => console.log("Error getting menu", error));
 }

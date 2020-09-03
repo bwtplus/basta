@@ -211,8 +211,9 @@
 	</div>
 
 	<script>
-		var jsonMenuUrl = '{{ .Params.urlSettings.foodMenuUrl }}';
-		var jsonOfferUrl = '{{ .Params.urlSettings.offerMenuUrl }}';
+		var mealsUrl = '{{ .Params.urlSettings.mealsUrl }}';
+		var offersUrl = '{{ .Params.urlSettings.offersUrl }}';
+		var currencyUrl = '{{ .Params.urlSettings.currencyUrl }}';
 	</script>
 	<script src="{{.Site.BaseURL}}/dist/bundle.js"></script>
 	{{ template "_internal/google_analytics_async.html" . }}
