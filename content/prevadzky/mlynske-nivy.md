@@ -3,84 +3,14 @@ title: Kantína Mlynské Nivy
 navbar:
   about: O nás
   contact: Kontakt
-  drinks: Nápoje
   locations1: Prevádzky
   menu1: Menu
-  news: Oznamy
 sectionHeader:
   siteSubtitle: Poctivá domáca kuchyňa v Bratislave
   websiteTitle: Dobrá Bašta
 sectionFoodMenu:
   subtitle: Vyberte si z našej dnešnej ponuky!
-  title: Denné menu
-sectionDrinks:
-  drinkCategories:
-    - drinks:
-        - description: 'neperlivá, vo fľaši'
-          price: 0.79
-          title: Budiš
-          volume: 0.5 l
-        - description: 'perlivá, vo fľaši'
-          price: 0.79
-          title: Budiš
-          volume: 0.5 l
-        - description: Originál plechovka
-          price: 0.99
-          title: Coca-Cola
-          volume: 0.33 l
-        - description: Originál vo fľaši
-          price: 0.99
-          title: Kofola
-          volume: 0.33 l
-        - description: Pepsi kola v plechovke
-          price: 0.33
-          title: Pepsi
-          volume: 0.5 l
-        - description: Originál vo fľaši
-          price: 0.99
-          title: Vinea
-          volume: 0.33 l
-      title: NEALKO
-    - drinks:
-        - description: Zlatý Bažant
-          price: 0.99
-          title: Rezané pivo
-          volume: 0.5 l
-        - description: '10 stupňové, ležiak'
-          price: '1.50'
-          title: Darebák
-          volume: 0.33 l
-        - description: '10 stupňové, tradičný ležiak'
-          price: 0.99
-          title: Kozel
-          volume: 0.5 l
-        - description: '14 stupňové, moc moc silné'
-          price: 1.99
-          title: Ochmeľená opica
-          volume: 0.33 l
-        - description: 14-stupňový špecál z Dodovaru
-          price: 1.39
-          title: Podstolovník
-          volume: 0.5 l
-        - description: 'Originál, nealkoholické pivo (0,49%)'
-          price: 0.99
-          title: Radegast Birell
-          volume: 0.5 l
-        - description: 'Originál, nealkoholické pivo (0,49%)'
-          price: 0.99
-          title: Radegast Birell
-          volume: 0.5 l
-        - description: '12 stupňové, špeciál s čerešňovým sirupom'
-          price: '2.49'
-          title: Srdcovka
-          volume: 0.33 l
-        - description: 'na rúbanisku. 11 stupňové, tmavé'
-          price: '0.99'
-          title: Tokajúci tetrov
-          volume: 0.33 l
-      title: PIVO
-  subtitle: Orosená odmena pre každého jedáka!
-  title: Ponuka nápojov
+  title: Menu
 sectionAboutUs:
   aboutUs:
     - content: >-
@@ -126,9 +56,7 @@ sectionContacts:
     - content: |-
         E-mail: <a href="mailto:info@dobrabasta.sk">info@dobrabasta.sk</a>
 
-
-
-        Telefón: <a href="tel:+421948838100">+421 948838100</a>
+        Telefón: <a href="tel:+421948838100">+421 948 838 100</a>
       icon: fa-mobile
       title: Kontakt
   subtitle: 'Nájdete nás veľmi ľahko, vrátite sa vždy zakrátko.'
@@ -137,10 +65,14 @@ urlSettings:
   facebookUrl:
   zomatoUrl:
   googlePlusUrl:
-  foodMenuUrl: 'https://basta-e2518.firebaseio.com/projects/-L2ylgkznZdhmlz1ptV9/data/meals.json'
+  mealsUrl: >-
+    https://basta-signage.firebaseio.com/projects/-LC8NAka14owE6zU7F4J/data/meals.json
+  offersUrl: >-
+    https://basta-signage.firebaseio.com/projects/-LC8NAka14owE6zU7F4J/data/offers.json
+  currencyUrl: >-
+    https://basta-signage.firebaseio.com/projects/-LC8NAka14owE6zU7F4J/data/currency.json
   gaCode: UA-123-45
   mapUrl: >-
     https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2662.1593730593586!2d17.1310265118132!3d48.14573260901364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssk!4v1516888708321
-  offerMenuUrl: 'https://basta-e2518.firebaseio.com/projects/-L2ylgkznZdhmlz1ptV9/data/offer.json'
 ---
 

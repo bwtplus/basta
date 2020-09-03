@@ -75,10 +75,8 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="wide-item"><a href="#food-menu">{{ .Params.navbar.menu1 }}</a></li>
-					<li class="wide-item"><a href="#drinks">{{ .Params.navbar.drinks}}</a></li>
 					<li class="narrow-item"><a href="#about-us">{{ .Params.navbar.about}}</a></li>
 					<li class="logoSpacing"></li>
-					<li class="narrow-item"><a href="#news">{{ .Params.navbar.news}}</a></li>
 					<li class="narrow-item"><a href="#contact">{{ .Params.navbar.contact}}</a></li>
 
 					<!--fix for scroll spy active menu element-->
@@ -93,12 +91,8 @@
 					</li>
 				</ul>
 			</div>
-			
-			<!--/.navbar-collapse -->
 		</div>
-		<!-- container -->
 	</div>
-	<!-- menu -->
 
 	<div id="header">
 		<div class="bg-overlay"></div>
@@ -116,7 +110,7 @@
 			</a>
 		</div>
 	</div>
-	<!-- /#header -->
+
 	<div id="food-menu" class="light-wrapper pricing">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
@@ -126,37 +120,8 @@
 		</div>
 		<section class="ss-style-bottom"></section>
 	</div>
-	<!--/#food-menu-->
 
-	<div id="drinks" class="parallax">
-		<div class="container inner">
-			<h2 class="section-title text-center">{{ .Params.sectionDrinks.Title }}</h2>
-			<p class="lead text-center drinks">{{ .Params.sectionDrinks.subtitle }}</p>
-
-			<div class="row drinks">
-				<table>
-					{{ range.Params.SectionDrinks.DrinkCategories }}
-						<tr>
-							<td>&nbsp;</td>
-							<td><div class="drink-category-title">{{ .title }}</div></td>
-							<td>&nbsp;</td>
-						</tr>
-						{{ range .drinks }}
-							<tr>
-								<td>{{ .volume }}</td>
-								<td><span class="drink-name">{{ .title }}</span>{{ .description}}</td>
-								<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
-							</tr>
-						{{ end }}
-					{{ end }}
-				</table>
-			</div>
-		</div>
-	</div>
-	<!-- /#drinks -->
-
-	<div id="about-us" class="light-wrapper">
-		<section class="ss-style-top"></section>
+	<div id="about-us" class="parallax">
 		<div class="container inner">
 			<h2 class="section-title text-center">{{ .Params.sectionAboutUs.Title }}</h2>
 			<p class="lead main text-center">{{ .Params.sectionAboutUs.subtitle }}</p>
@@ -174,17 +139,15 @@
 				</div>
 				{{ end }}
 			</div>
+			<br/>
+			<br/>
 
-			<p id="news" class="lead main">&nbsp;</p>
 			<h2 class="section-title text-center">{{ .Params.sectionnews.Title }}</h2>
 			<div class="news-items">{{ range .Params.SectionNews.news }}<p>{{ .text | markdownify }}</p>{{ end }}</div>
-			
 		</div>
-		<section class="ss-style-bottom"></section>
 	</div>
-	<!-- #about-us -->
 
-	<div id="contact" class="parallax">
+	<div id="contact" class="wrapper">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
 			<h2 class="section-title text-center">{{ .Params.SectionContacts.Title }}</h2>
@@ -214,7 +177,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- #contact -->
+
 	<footer id="footer" class="dark-wrapper">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
@@ -233,7 +196,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.container -->
 	</footer>
 
 	<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
@@ -245,8 +207,9 @@
 	</div>
 
 	<script>
-		var jsonMenuUrl = '{{ .Params.urlSettings.foodMenuUrl }}';
-		var jsonOfferUrl = '{{ .Params.urlSettings.offerMenuUrl }}';
+		var mealsUrl = '{{ .Params.urlSettings.mealsUrl }}';
+		var offersUrl = '{{ .Params.urlSettings.offersUrl }}';
+		var currencyUrl = '{{ .Params.urlSettings.currencyUrl }}';
 	</script>
 	<script src="{{.Site.BaseURL}}/dist/bundle.js"></script>
 	{{ template "_internal/google_analytics_async.html" . }}
