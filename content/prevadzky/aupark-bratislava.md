@@ -13,7 +13,7 @@ sectionHeader:
 sectionFoodMenu:
   subtitle: Vyberte si z našej dnešnej ponuky!
   title: Denné menu
-  sectionDrinks:
+sectionDrinks:
   drinkCategories:
     - drinks:
         - description: 'neperlivá, vo fľaši'
