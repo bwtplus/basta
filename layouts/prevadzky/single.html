@@ -93,12 +93,8 @@
 					</li>
 				</ul>
 			</div>
-			
-			<!--/.navbar-collapse -->
 		</div>
-		<!-- container -->
 	</div>
-	<!-- menu -->
 
 	<div id="header">
 		<div class="bg-overlay"></div>
@@ -116,7 +112,7 @@
 			</a>
 		</div>
 	</div>
-	<!-- /#header -->
+
 	<div id="food-menu" class="light-wrapper pricing">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
@@ -126,34 +122,6 @@
 		</div>
 		<section class="ss-style-bottom"></section>
 	</div>
-	<!--/#food-menu-->
-
-	<div id="drinks" class="parallax">
-		<div class="container inner">
-			<h2 class="section-title text-center">{{ .Params.sectionDrinks.Title }}</h2>
-			<p class="lead text-center drinks">{{ .Params.sectionDrinks.subtitle }}</p>
-
-			<div class="row drinks">
-				<table>
-					{{ range.Params.SectionDrinks.DrinkCategories }}
-						<tr>
-							<td>&nbsp;</td>
-							<td><div class="drink-category-title">{{ .title }}</div></td>
-							<td>&nbsp;</td>
-						</tr>
-						{{ range .drinks }}
-							<tr>
-								<td>{{ .volume }}</td>
-								<td><span class="drink-name">{{ .title }}</span>{{ .description}}</td>
-								<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
-							</tr>
-						{{ end }}
-					{{ end }}
-				</table>
-			</div>
-		</div>
-	</div>
-	<!-- /#drinks -->
 
 	<div id="about-us" class="light-wrapper">
 		<section class="ss-style-top"></section>
@@ -182,7 +150,6 @@
 		</div>
 		<section class="ss-style-bottom"></section>
 	</div>
-	<!-- #about-us -->
 
 	<div id="contact" class="parallax">
 		<section class="ss-style-top"></section>
@@ -214,7 +181,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- #contact -->
+
 	<footer id="footer" class="dark-wrapper">
 		<section class="ss-style-top"></section>
 		<div class="container inner">
@@ -233,7 +200,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.container -->
 	</footer>
 
 	<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
