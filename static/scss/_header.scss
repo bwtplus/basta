@@ -70,7 +70,7 @@ a.navbar-brand {
 
 .navbar-nav {
     >li.logoSpacing {
-        width: 165px;
+        width: 144px;
     }
     @media (min-width:768px) {
         float: none !important;
@@ -112,14 +112,16 @@ a.navbar-brand {
 #logo {
     position: absolute;
     display: block;
-    width: 165px;
     left: 50%;
-    margin-left: -75px;
+    margin-left: -55px;
     background: $font-color-light;
     border: gray solid;
     border-width: 2px;
     padding: 12px;
-    border-radius: 0 0 100% 100%;
+    img {
+        max-width: 100px;
+        height: auto;
+    }
 }
 
 // Title section
